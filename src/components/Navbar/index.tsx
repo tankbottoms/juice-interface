@@ -4,8 +4,9 @@ import { Header } from 'antd/lib/layout/layout'
 import Account from './Account'
 import MobileCollapse from './MobileCollapse'
 import Logo from './Logo'
-import OptionsCollapse from './OptionsCollapse'
 import { menu } from './MenuItems'
+import NavLanguageSelector from './NavLanguageSelector'
+import ThemePicker from './ThemePicker'
 
 export default function Navbar() {
   return window.innerWidth > 900 ? (
@@ -17,8 +18,9 @@ export default function Navbar() {
         {menu()}
       </Space>
 
-      <Space className="top-right-nav" size="middle">
-        <OptionsCollapse />
+      <Space className="top-right-nav" size={0}>
+        <NavLanguageSelector />
+        <ThemePicker />
         <Account />
       </Space>
     </Header>

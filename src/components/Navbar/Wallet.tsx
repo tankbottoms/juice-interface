@@ -1,4 +1,8 @@
 import FormattedAddress from 'components/shared/FormattedAddress'
+import { LogoutOutlined } from '@ant-design/icons'
+import { Trans } from '@lingui/macro'
+
+import { NetworkContext } from 'contexts/networkContext'
 import { ThemeContext } from 'contexts/themeContext'
 import { useContext } from 'react'
 import { Tooltip } from 'antd'
@@ -13,14 +17,28 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
 
   const height = 45
 
+  const { onLogOut } = useContext(NetworkContext)
+
   return (
     <Tooltip
       trigger={['hover', 'click']}
       title={
-        <span>
-          <EtherscanLink value={userAddress} type="address" />{' '}
-          <CopyTextButton value={userAddress} />
-        </span>
+        <div>
+          <div className="nav-dropdown-item">
+            <EtherscanLink
+              value={userAddress}
+              type="address"
+              shortened={true}
+            />{' '}
+            <CopyTextButton value={userAddress} />
+          </div>
+          <div className="nav-dropdown-item" onClick={onLogOut}>
+            <LogoutOutlined />
+            <div style={{ margin: '0 0 2px 13px' }}>
+              <Trans>Disconnect</Trans>
+            </div>
+          </div>
+        </div>
       }
     >
       <div

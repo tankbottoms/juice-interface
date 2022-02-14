@@ -16,7 +16,7 @@ export default function Account({ mobile }: { mobile?: boolean }) {
         <div
           style={{
             marginLeft: mobile ? 'auto' : 10,
-            marginTop: mobile ? -3 : -10,
+            marginTop: mobile ? -3 : 0,
           }}
         >
           <Button onClick={onSelectWallet}>

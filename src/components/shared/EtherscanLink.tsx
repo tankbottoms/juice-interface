@@ -11,13 +11,21 @@ import { readNetwork } from 'constants/networks'
 export default function EtherscanLink({
   value,
   type,
+  shortened,
   showText,
 }: {
   value: string | undefined
   type: 'tx' | 'address'
+  shortened?: boolean
   showText?: boolean
 }) {
   if (!value) return null
+  let shortenedValue: string | undefined
+  // Return first and last 4 chars of ETH address only
+  if (shortened) {
+    shortenedValue =
+      value.substring(0, 6) + '...' + value.substring(value.length - 4)
+  }
 
   let subdomain = ''
 
@@ -40,7 +48,7 @@ export default function EtherscanLink({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkOutlined />
+          <LinkOutlined />C
         </a>
       </Tooltip>
     )
@@ -55,7 +63,7 @@ export default function EtherscanLink({
         target="_blank"
         rel="noopener noreferrer"
       >
-        {value}
+        {shortenedValue ?? value}
       </a>
     </Tooltip>
   )
