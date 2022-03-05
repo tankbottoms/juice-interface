@@ -1,9 +1,9 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { constants } from 'ethers'
-import { CurrencyOption } from 'models/currency-option'
+import { V1CurrencyOption } from 'models/v1/currencyOption'
 import { PayoutMod, TicketMod } from 'models/mods'
-import { ProjectMetadataV3 } from 'models/project-metadata'
+import { ProjectMetadataV4 } from 'models/project-metadata'
 import {
   fromPerbicent,
   fromPermille,
@@ -11,19 +11,19 @@ import {
   parsePermille,
 } from 'utils/formatNumber'
 import {
-  SerializedFundingCycle,
-  serializeFundingCycle,
-} from 'utils/serializers'
+  SerializedV1FundingCycle,
+  serializeV1FundingCycle,
+} from 'utils/v1/serializers'
 
 interface EditingProjectInfo {
-  metadata: ProjectMetadataV3
+  metadata: ProjectMetadataV4
   handle: string
 }
 
 export interface EditingProjectState {
   version: number
   info: EditingProjectInfo
-  fundingCycle: SerializedFundingCycle
+  fundingCycle: SerializedV1FundingCycle
   payoutMods: PayoutMod[]
   ticketMods: TicketMod[]
 }
@@ -45,11 +45,12 @@ export const defaultProjectState: EditingProjectState = {
       twitter: '',
       discord: '',
       tokens: [],
-      version: 3,
+      version: 4,
+      archived: false,
     },
     handle: '',
   },
-  fundingCycle: serializeFundingCycle({
+  fundingCycle: serializeV1FundingCycle({
     id: BigNumber.from(1),
     projectId: BigNumber.from(0),
     number: BigNumber.from(1),
@@ -59,7 +60,7 @@ export const defaultProjectState: EditingProjectState = {
     start: BigNumber.from(Math.floor(new Date().valueOf() / 1000)),
     duration: BigNumber.from(0),
     tapped: BigNumber.from(0),
-    weight: constants.WeiPerEther, // 1e24
+    weight: constants.WeiPerEther.mul(1000000), // 1e24
     fee: BigNumber.from(0),
     reserved: parsePerbicent(0),
     bondingCurveRate: defaultBondingCurveRate,
@@ -112,7 +113,10 @@ export const editingProjectSlice = createSlice({
     setDescription: (state, action: PayloadAction<string>) => {
       state.info.metadata.description = action.payload
     },
-    setFundingCycle: (state, action: PayloadAction<SerializedFundingCycle>) => {
+    setFundingCycle: (
+      state,
+      action: PayloadAction<SerializedV1FundingCycle>,
+    ) => {
       state.fundingCycle = action.payload
     },
     setId: (state, action: PayloadAction<string>) => {
@@ -142,7 +146,7 @@ export const editingProjectSlice = createSlice({
     setBondingCurveRate: (state, action: PayloadAction<string>) => {
       state.fundingCycle.bondingCurveRate = action.payload
     },
-    setCurrency: (state, action: PayloadAction<CurrencyOption>) => {
+    setCurrency: (state, action: PayloadAction<V1CurrencyOption>) => {
       state.fundingCycle.currency = action.payload.toString()
     },
     setBallot: (state, action: PayloadAction<string>) => {

@@ -6,6 +6,8 @@ import { ThemeContext } from 'contexts/themeContext'
 import { useContext, useLayoutEffect, useState } from 'react'
 import { ipfsCidUrl, pinFileToIpfs } from 'utils/ipfs'
 
+import ExternalLink from '../ExternalLink'
+
 export default function ImageUploader({
   initialUrl,
   onSuccess,
@@ -71,20 +73,12 @@ export default function ImageUploader({
                   return Upload.LIST_IGNORE
                 }
               }}
-              customRequest={req =>
-                pinFileToIpfs(req.file, {
-                  metadata,
-                  beforeUpload: () => setLoadingUpload(true),
-                  onSuccess: cid => {
-                    setValue(cid)
-                    setLoadingUpload(false)
-                  },
-                }).then(res => {
-                  if (res.success) {
-                    req.onSuccess && req.onSuccess(req.data, res.res as any)
-                  } else req.onError && req.onError(res.err as any, req.data)
-                })
-              }
+              customRequest={async req => {
+                setLoadingUpload(true)
+                const res = await pinFileToIpfs(req.file, metadata)
+                setValue(res.IpfsHash)
+                setLoadingUpload(false)
+              }}
             >
               <Button loading={loadingUpload} type="text">
                 <FileImageOutlined /> {text ?? null}
@@ -104,10 +98,7 @@ export default function ImageUploader({
             }}
           >
             <Trans>
-              Uploaded to:{' '}
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                {url}
-              </a>
+              Uploaded to: <ExternalLink href={url}>{url}</ExternalLink>
             </Trans>
           </span>
         ) : null}

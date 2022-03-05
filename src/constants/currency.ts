@@ -1,4 +1,23 @@
-import { CurrencyETH, CurrencyUSD } from 'models/currency-option'
+import { CSSProperties } from 'react'
 
-export const CURRENCY_ETH: CurrencyETH = 0
-export const CURRENCY_USD: CurrencyUSD = 1
+export type CurrencyName = 'ETH' | 'USD'
+export type CurrencySymbol = 'Ξ' | 'US$'
+export type CurrencyMetadata = {
+  name: CurrencyName
+  symbol: CurrencySymbol
+  style?: CSSProperties
+}
+
+export const CURRENCY_METADATA: Record<CurrencyName, CurrencyMetadata> = {
+  ETH: {
+    name: 'ETH',
+    symbol: 'Ξ',
+    style: {
+      fontFamily: 'sans-serif',
+    },
+  },
+  USD: {
+    name: 'USD',
+    symbol: 'US$',
+  },
+}

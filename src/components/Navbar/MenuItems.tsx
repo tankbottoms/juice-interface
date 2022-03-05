@@ -1,10 +1,11 @@
 import { t } from '@lingui/macro'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import { Collapse, Space } from 'antd'
 import { DownOutlined, UpOutlined } from '@ant-design/icons'
 import CollapsePanel from 'antd/lib/collapse/CollapsePanel'
+import ExternalLink from 'components/shared/ExternalLink'
 
 export function ItemDropdown({
   heading,
@@ -88,9 +89,9 @@ export function DropdownItem({
   onClick?: VoidFunction
 }) {
   return (
-    <a className="nav-dropdown-item" href={route} onClick={onClick}>
+    <ExternalLink className="nav-dropdown-item" href={route} onClick={onClick}>
       {text}
-    </a>
+    </ExternalLink>
   )
 }
 
@@ -145,6 +146,12 @@ export const menu = (onClickMenuItems?: VoidFunction) => {
             key="podcast"
             text={t`Podcast`}
             route="https://open.spotify.com/show/4G8ji7vofcOx2acXcjXIa4?si=1e5e6e171ed744e8"
+            onClick={onClickMenuItems}
+          />,
+          <DropdownItem
+            key="peel"
+            text={t`Peel`}
+            route="https://discord.gg/XvmfY4Hkcz"
             onClick={onClickMenuItems}
           />,
         ]}

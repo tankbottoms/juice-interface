@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { FundingCycle } from 'models/funding-cycle'
+import { V1FundingCycle } from 'models/v1/fundingCycle'
 import { PayoutMod, TicketMod } from 'models/mods'
-import { ProjectMetadataV3 } from 'models/project-metadata'
+import { ProjectMetadataV4 } from 'models/project-metadata'
 import { ProjectType } from 'models/project-type'
 import { V1TerminalName } from 'models/v1/terminals'
 import { V1TerminalVersion } from 'models/v1/terminals'
@@ -12,11 +12,11 @@ export type V1ProjectContextType = {
   projectType: ProjectType | undefined
   createdAt: number | undefined
   handle: string | undefined
-  metadata: ProjectMetadataV3 | undefined
+  metadata: ProjectMetadataV4 | undefined
   owner: string | undefined // owner address
   earned: BigNumber | undefined
-  currentFC: FundingCycle | undefined
-  queuedFC: FundingCycle | undefined
+  currentFC: V1FundingCycle | undefined
+  queuedFC: V1FundingCycle | undefined
   currentPayoutMods: PayoutMod[] | undefined
   currentTicketMods: TicketMod[] | undefined
   queuedPayoutMods: PayoutMod[] | undefined

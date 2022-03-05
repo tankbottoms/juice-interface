@@ -7,6 +7,7 @@ import { NetworkName } from 'models/network-name'
 import { LinkOutlined } from '@ant-design/icons'
 
 import { readNetwork } from 'constants/networks'
+import ExternalLink from './ExternalLink'
 
 export default function EtherscanLink({
   value,
@@ -28,43 +29,29 @@ export default function EtherscanLink({
   }
 
   let subdomain = ''
-
   if (readNetwork.name !== NetworkName.mainnet) {
     subdomain = readNetwork.name + '.'
   }
 
-  const goToEtherscan = () => {
-    window.open(`https://${subdomain}etherscan.io/${type}/${value}`)
+  const linkProps = {
+    className: 'hover-action',
+    style: { fontWeight: 400 },
+    href: `https://${subdomain}etherscan.io/${type}/${value}`,
   }
 
   if (type === 'tx') {
     return (
-      <Tooltip trigger={['hover', 'click']} title={t`See transaction`}>
-        <a
-          className="hover-action"
-          style={{ fontWeight: 400 }}
-          onClick={goToEtherscan}
-          href={`https://${subdomain}etherscan.io/${type}/${value}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkOutlined />C
-        </a>
+      <Tooltip title={t`See transaction`}>
+        <ExternalLink {...linkProps}>
+          <LinkOutlined />
+        </ExternalLink>
       </Tooltip>
     )
   }
+
   return (
-    <Tooltip trigger={['hover', 'click']} title={t`Go to Etherscan`}>
-      <a
-        className="hover-action"
-        style={{ fontWeight: 400 }}
-        onClick={goToEtherscan}
-        href={`https://${subdomain}etherscan.io/${type}/${value}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {shortenedValue ?? value}
-      </a>
+    <Tooltip title={t`Go to Etherscan`}>
+      <ExternalLink {...linkProps}>{shortenedValue ?? value}</ExternalLink>
     </Tooltip>
   )
 }
