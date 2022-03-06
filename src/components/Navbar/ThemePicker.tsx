@@ -34,7 +34,7 @@ export default function ThemePicker({ mobile }: { mobile?: boolean }) {
     justifyContent: 'space-evenly',
     cursor: 'pointer',
     width: iconSize * 2 + padding * 4,
-    marginRight: 30,
+    marginRight: 38,
     height,
     borderRadius: height / 2,
   }
@@ -78,7 +78,7 @@ export default function ThemePicker({ mobile }: { mobile?: boolean }) {
     )
   }
   return (
-    <React.Fragment>
+    <div style={{ display: 'flex' }}>
       {themeOption === ThemeOption.dark ? (
         <React.Fragment>
           <Sun size={16} />
@@ -94,6 +94,6 @@ export default function ThemePicker({ mobile }: { mobile?: boolean }) {
           </div>
         </React.Fragment>
       )}
-    </React.Fragment>
+    </div>
   )
 }

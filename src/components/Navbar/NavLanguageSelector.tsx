@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import { CSSProperties, useState } from 'react'
 import { Select } from 'antd'
 import { GlobalOutlined } from '@ant-design/icons'
 
@@ -7,8 +7,10 @@ import { Languages } from 'constants/languages/language-options'
 // Language select tool seen in top nav
 export default function NavLanguageSelector({
   disableLang,
+  mobile,
 }: {
   disableLang?: string
+  mobile?: boolean
 }) {
   const selectStyle: CSSProperties = {
     display: 'flex',
@@ -16,9 +18,11 @@ export default function NavLanguageSelector({
     justifyContent: 'space-evenly',
     cursor: 'pointer',
     height: 30,
-    width: 100,
+    width: mobile ? 100 : 61,
     fontWeight: 500,
   }
+
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false)
 
   // Renders Select Option for each language available on Juicebox
   const renderLanguageOption = (lang: string) => {
@@ -27,7 +31,7 @@ export default function NavLanguageSelector({
     }
     return (
       <Select.Option key={lang} class="language-select-option" value={lang}>
-        <div>{Languages[lang].long}</div>
+        <div>{mobile ? Languages[lang].long : Languages[lang].short}</div>
       </Select.Option>
     )
   }
@@ -41,15 +45,28 @@ export default function NavLanguageSelector({
     window.location.reload()
   }
 
+  const selectHeader = mobile
+    ? Languages[currentSelectedLanguage].long
+    : Languages[currentSelectedLanguage].short
+  // Close dropdown when clicking anywhere in the window
+  window.addEventListener('click', () => setDropdownOpen(false), false)
   return (
-    <div className="language-selector">
-      <GlobalOutlined />
+    <div
+      className="language-selector"
+      style={{ cursor: 'pointer' }}
+      onClick={e => {
+        e.stopPropagation()
+        setDropdownOpen(dropdownOpen === true ? false : true)
+      }}
+    >
+      <GlobalOutlined style={{ marginBottom: 2 }} />
       <Select
         className="medium"
         style={{
           ...selectStyle,
         }}
-        value={Languages[currentSelectedLanguage]?.long ?? 'English'}
+        open={dropdownOpen}
+        value={selectHeader ?? 'EN'}
         onChange={newLanguage => {
           setLanguage(newLanguage)
         }}
