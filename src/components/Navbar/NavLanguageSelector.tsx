@@ -1,8 +1,11 @@
-import { CSSProperties, useState } from 'react'
+import { CSSProperties, useContext, useState } from 'react'
 import { Select } from 'antd'
 import { GlobalOutlined } from '@ant-design/icons'
 
 import { Languages } from 'constants/languages/language-options'
+import { ThemeContext } from 'contexts/themeContext'
+
+import juiceBoxShadow from 'constants/styles/boxShadow'
 
 // Language select tool seen in top nav
 export default function NavLanguageSelector({
@@ -12,6 +15,10 @@ export default function NavLanguageSelector({
   disableLang?: string
   mobile?: boolean
 }) {
+  const {
+    isDarkMode,
+    theme: { colors },
+  } = useContext(ThemeContext)
   const selectStyle: CSSProperties = {
     display: 'flex',
     alignItems: 'center',
@@ -45,6 +52,12 @@ export default function NavLanguageSelector({
     window.location.reload()
   }
 
+  const desktopDropdownStyle: CSSProperties = {
+    border: '1px solid ' + colors.stroke.tertiary,
+    marginRight: 20,
+    boxShadow: juiceBoxShadow(isDarkMode),
+  }
+
   const selectHeader = mobile
     ? Languages[currentSelectedLanguage].long
     : Languages[currentSelectedLanguage].short
@@ -65,6 +78,7 @@ export default function NavLanguageSelector({
         style={{
           ...selectStyle,
         }}
+        dropdownStyle={mobile ? {} : desktopDropdownStyle}
         open={dropdownOpen}
         value={selectHeader ?? 'EN'}
         onChange={newLanguage => {

@@ -11,9 +11,13 @@ import EtherscanLink from 'components/shared/EtherscanLink'
 import CopyTextButton from 'components/shared/CopyTextButton'
 
 import Balance from './Balance'
+import juiceBoxShadow from 'constants/styles/boxShadow'
 
 export default function Wallet({ userAddress }: { userAddress: string }) {
-  const { colors } = useContext(ThemeContext).theme
+  const {
+    isDarkMode,
+    theme: { colors },
+  } = useContext(ThemeContext)
 
   const height = 45
 
@@ -23,7 +27,8 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
     padding: 0,
     borderRadius: 1,
     backgroundColor: colors.background.l0,
-    border: '1px solid ' + colors.stroke.secondary,
+    border: '1px solid ' + colors.stroke.tertiary,
+    boxShadow: juiceBoxShadow(isDarkMode),
   }
 
   const menuItemPadding = '10px 15px'
@@ -36,12 +41,15 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
       </Menu.Item>
       <Menu.Item
         onClick={onLogOut}
-        style={{ padding: menuItemPadding, color: colors.text.primary }}
+        style={{
+          padding: menuItemPadding,
+          color: colors.text.primary,
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
       >
+        <Trans>Disconnect</Trans>
         <LogoutOutlined />
-        <div style={{ margin: '0 0 0 13px' }}>
-          <Trans>Disconnect</Trans>
-        </div>
       </Menu.Item>
     </Menu>
   )

@@ -69,11 +69,14 @@
     border-radius: 2px;
   }
   .ant-collapse-content-box {
-    border: 1px solid var(--stroke-secondary);
-    box-shadow: none !important;
+    border: 1px solid var(--stroke-tertiary);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
     padding: 0;
     width: 100%;
     background-color: var(--background-l0);
+  }
+  .ant-collapse-content-box.dark {
+    box-shadow: 0px 8px 12px #000000;
   }
   .ant-select-arrow {
     display: none;
@@ -185,6 +188,10 @@
   .ant-select-arrow {
     display: block;
   }
+}
+
+.resources-dropdown.dark .ant-collapse-content-box {
+  box-shadow: 0px 8px 12px #000000;
 }
 
 // Dotdotdot menu and wallet/balance
