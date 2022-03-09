@@ -6,8 +6,8 @@ import { V1ProjectContext } from 'contexts/v1/projectContext'
 import { useContext, useState } from 'react'
 import { formatWad, fromWad } from 'utils/formatNumber'
 import { decodeFundingCycleMetadata } from 'utils/v1/fundingCycle'
-import AmountToWei from 'utils/AmountToWei'
 import { usePayV1ProjectTx } from 'hooks/v1/transactor/PayV1ProjectTx'
+import useWeiConverter from 'hooks/useWeiConverter'
 
 import PayWarningModal from 'components/shared/PayWarningModal'
 
@@ -33,12 +33,12 @@ export default function V1PayButton({
   const [payWarningModalVisible, setPayWarningModalVisible] =
     useState<boolean>(false)
 
-  if (!metadata || !currentFC) return null
-
-  const weiPayAmt = AmountToWei({
+  const weiPayAmt = useWeiConverter({
     currency: payInCurrency,
     amount: payAmount,
   })
+
+  if (!metadata || !currentFC) return null
 
   const fcMetadata = decodeFundingCycleMetadata(currentFC?.metadata)
 
@@ -129,7 +129,7 @@ export default function V1PayButton({
         visible={payModalVisible}
         onSuccess={() => setPayModalVisible(false)}
         onCancel={() => setPayModalVisible(false)}
-        weiAmount={AmountToWei({ currency: payInCurrency, amount: payAmount })}
+        weiAmount={weiPayAmt}
         payProjectTx={payProjectTx}
       />
     </>

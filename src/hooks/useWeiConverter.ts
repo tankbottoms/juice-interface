@@ -4,7 +4,8 @@ import { parseEther } from 'ethers/lib/utils'
 import { useContext } from 'react'
 import { CurrencyContext } from 'contexts/currencyContext'
 
-export default function AmountToWei({
+// Converts an amount (ETH or USD) to WEI
+export default function useWeiConverter({
   currency,
   amount,
 }: {

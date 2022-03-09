@@ -4,7 +4,7 @@ import { CSSProperties, useContext } from 'react'
 import { decodeFundingCycleMetadata } from 'utils/v1/fundingCycle'
 
 import ProjectHeader from 'components/shared/ProjectHeader'
-import PayInput from 'components/shared/inputs/Pay/PayInput'
+import PayInputGroup from 'components/shared/inputs/Pay/PayInputGroup'
 
 import BalanceTimeline from './BalanceTimeline'
 import FundingCycles from './FundingCycles'
@@ -55,7 +55,7 @@ export default function V1Project({
         </Col>
 
         <Col xs={24} md={column ? 24 : 12} style={{ marginTop: gutter }}>
-          <PayInput
+          <PayInputGroup
             PayButton={V1PayButton}
             reservedRate={reservedRate}
             weight={currentFC?.weight}

@@ -12,7 +12,7 @@ export type PayButtonProps = {
   payInCurrency: number
 }
 
-export default function PayInput({
+export default function PayInputGroup({
   PayButton,
   reservedRate,
   weight,

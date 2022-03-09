@@ -14,7 +14,7 @@ import { ThemeContext } from 'contexts/themeContext'
 import AMMPrices from 'components/shared/AMMPrices'
 import TooltipIcon from 'components/shared/TooltipIcon'
 
-import AmountToWei from 'utils/AmountToWei'
+import useWeiConverter from 'hooks/useWeiConverter'
 
 /**
  * Help text shown below the Pay input field.
@@ -54,7 +54,11 @@ export default function PayInputSubText({
     capitalize: false,
     plural: true,
   })
-  const weiPayAmt = AmountToWei({ currency: payInCurrency, amount: amount })
+
+  const weiPayAmt = useWeiConverter({
+    currency: payInCurrency,
+    amount: amount,
+  })
 
   const receiveText = useMemo(() => {
     const formatReceivedTickets = (wei: BigNumber) => {

@@ -4,7 +4,7 @@ import { V1UserContext } from 'contexts/v1/userContext'
 
 import { useContext } from 'react'
 
-import { BigNumber } from 'ethers'
+import { BigNumber } from '@ethersproject/bignumber'
 
 import { TransactorInstance } from '../../Transactor'
 
