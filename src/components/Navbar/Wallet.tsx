@@ -4,20 +4,21 @@ import { Trans } from '@lingui/macro'
 
 import { NetworkContext } from 'contexts/networkContext'
 import { ThemeContext } from 'contexts/themeContext'
-import { CSSProperties, useContext } from 'react'
+import { useContext } from 'react'
 import { Dropdown, Menu } from 'antd'
 
 import EtherscanLink from 'components/shared/EtherscanLink'
 import CopyTextButton from 'components/shared/CopyTextButton'
+import useMobile from 'hooks/Mobile'
 
 import Balance from './Balance'
-import juiceBoxShadow from 'constants/styles/boxShadow'
 
 export default function Wallet({ userAddress }: { userAddress: string }) {
   const {
-    isDarkMode,
     theme: { colors },
   } = useContext(ThemeContext)
+
+  const isMobile = useMobile()
 
   const height = 45
 
@@ -31,19 +32,21 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
         <EtherscanLink value={userAddress} type="address" shortened={true} />{' '}
         <CopyTextButton value={userAddress} style={{ zIndex: 1 }} />
       </Menu.Item>
-      <Menu.Item
-        onClick={onLogOut}
-        style={{
-          padding: menuItemPadding,
-          color: colors.text.primary,
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-        key={1}
-      >
-        <Trans>Disconnect</Trans>
-        <LogoutOutlined />
-      </Menu.Item>
+      {!isMobile && (
+        <Menu.Item
+          onClick={onLogOut}
+          style={{
+            padding: menuItemPadding,
+            color: colors.text.primary,
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+          key={1}
+        >
+          <Trans>Disconnect</Trans>
+          <LogoutOutlined />
+        </Menu.Item>
+      )}
     </Menu>
   )
 

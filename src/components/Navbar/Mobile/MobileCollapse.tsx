@@ -13,11 +13,12 @@ import { NetworkContext } from 'contexts/networkContext'
 
 import FeedbackFormBtn from 'components/shared/FeedbackFormBtn'
 
-import ThemePicker from './ThemePicker'
-import Logo from './Logo'
-import Account from './Account'
-import NavLanguageSelector from './NavLanguageSelector'
-import { TopLeftNavItems } from './MenuItems'
+import Logo from '../Logo'
+import Account from '../Account'
+import NavLanguageSelector from '../NavLanguageSelector'
+import { TopLeftNavItems } from '../MenuItems'
+import ThemePickerMobile from './ThemePickerMobile'
+import ResourcesDropdownMobile from './ResourcesDropdownMobile'
 
 export default function MobileCollapse() {
   const [activeKey, setActiveKey] = useState<0 | undefined>()
@@ -64,9 +65,10 @@ export default function MobileCollapse() {
               setActiveKey(activeKey === 0 ? undefined : 0)
             }
           />
+          <ResourcesDropdownMobile />
           <div className="nav-subsection">
             <NavLanguageSelector mobile={true} />
-            <ThemePicker mobile={true} />
+            <ThemePickerMobile />
             <FeedbackFormBtn mobile={true} />
           </div>
           <Account mobile={true} />

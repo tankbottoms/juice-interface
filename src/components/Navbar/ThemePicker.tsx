@@ -39,44 +39,39 @@ export default function ThemePicker({ mobile }: { mobile?: boolean }) {
     borderRadius: height / 2,
   }
 
-  if (!mobile) {
-    return (
+  return (
+    <div
+      className="clickable-border"
+      style={switchStyle}
+      onClick={() =>
+        setThemeOption(
+          themeOption === ThemeOption.dark
+            ? ThemeOption.light
+            : ThemeOption.dark,
+        )
+      }
+    >
       <div
-        className="clickable-border"
-        style={switchStyle}
-        onClick={() =>
-          setThemeOption(
-            themeOption === ThemeOption.dark
-              ? ThemeOption.light
-              : ThemeOption.dark,
-          )
-        }
+        style={{
+          ...iconStyle,
+          color:
+            themeOption === ThemeOption.light ? selectedColor : unselectedColor,
+        }}
       >
-        <div
-          style={{
-            ...iconStyle,
-            color:
-              themeOption === ThemeOption.light
-                ? selectedColor
-                : unselectedColor,
-          }}
-        >
-          <Sun size={iconSize} />
-        </div>
-        <div
-          style={{
-            ...iconStyle,
-            color:
-              themeOption === ThemeOption.dark
-                ? selectedColor
-                : unselectedColor,
-          }}
-        >
-          <Moon size={iconSize} />
-        </div>
+        <Sun size={iconSize} />
       </div>
-    )
-  }
+      <div
+        style={{
+          ...iconStyle,
+          color:
+            themeOption === ThemeOption.dark ? selectedColor : unselectedColor,
+        }}
+      >
+        <Moon size={iconSize} />
+      </div>
+    </div>
+  )
+
   return (
     <div style={{ display: 'flex' }}>
       {themeOption === ThemeOption.dark ? (

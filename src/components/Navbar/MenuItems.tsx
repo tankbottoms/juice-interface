@@ -2,14 +2,12 @@ import { t, Trans } from '@lingui/macro'
 
 import { CSSProperties, useState } from 'react'
 
-import { Collapse, Dropdown, Menu, Space } from 'antd'
+import { Dropdown, Menu, Space } from 'antd'
 import { DownOutlined, UpOutlined } from '@ant-design/icons'
-import CollapsePanel from 'antd/lib/collapse/CollapsePanel'
 import ExternalLink from 'components/shared/ExternalLink'
-import EtherscanLink from 'components/shared/EtherscanLink'
-import CopyTextButton from 'components/shared/CopyTextButton'
-import useMobile from 'hooks/Mobile'
+
 import Logo from './Logo'
+import ResourcesDropdownMobile from './Mobile/ResourcesDropdownMobile'
 
 export function NavMenuItem({
   text,
@@ -90,10 +88,6 @@ const resourcesMenu = (
   </Menu>
 )
 
-// const resourcesMobileStyle: CSSProperties = {
-//   mar
-// }
-
 export function TopLeftNavItems({
   isMobile,
   onClickMenuItems,
@@ -110,6 +104,7 @@ export function TopLeftNavItems({
     <Space
       size={isMobile ? 0 : 'large'}
       className="top-left-nav"
+      style={isMobile ? { position: 'static' } : {}}
       direction={isMobile ? 'vertical' : 'horizontal'}
     >
       {!isMobile && (
@@ -141,24 +136,25 @@ export function TopLeftNavItems({
         route="https://discord.gg/6jXrJSyDFf"
       />
 
-      <Dropdown
-        overlay={resourcesMenu}
-        overlayStyle={{ padding: 0 }}
-        visible={resourcesOpen}
-      >
-        <div
-          className="nav-menu-item hover-opacity"
-          // style={{marginLeft: isMobile ? '15px' : ''}}
-          onClick={() => setResourcesOpen(!resourcesOpen)}
+      {!isMobile && (
+        <Dropdown
+          overlay={resourcesMenu}
+          overlayStyle={{ padding: 0 }}
+          visible={resourcesOpen}
         >
-          <Trans>Resources</Trans>
-          {resourcesOpen ? (
-            <UpOutlined style={dropdownIconStyle} />
-          ) : (
-            <DownOutlined style={dropdownIconStyle} />
-          )}
-        </div>
-      </Dropdown>
+          <div
+            className="nav-menu-item hover-opacity"
+            onClick={() => setResourcesOpen(!resourcesOpen)}
+          >
+            <Trans>Resources</Trans>
+            {resourcesOpen ? (
+              <UpOutlined style={dropdownIconStyle} />
+            ) : (
+              <DownOutlined style={dropdownIconStyle} />
+            )}
+          </div>
+        </Dropdown>
+      )}
     </Space>
   )
 }
