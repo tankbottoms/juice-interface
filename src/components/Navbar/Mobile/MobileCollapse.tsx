@@ -19,7 +19,7 @@ import NavLanguageSelector from '../NavLanguageSelector'
 import { TopLeftNavItems } from '../MenuItems'
 import ThemePickerMobile from './ThemePickerMobile'
 import ResourcesDropdownMobile from './ResourcesDropdownMobile'
-import { mobileNavSubsectionStyles, topNavStyles } from '../styles'
+import { mobileNavSubsectionStyles, topNavStyles } from '../navStyles'
 
 export default function MobileCollapse() {
   const [navOpen, setNavOpen] = useState<0 | undefined>()

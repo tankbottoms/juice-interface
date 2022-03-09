@@ -8,7 +8,11 @@ import ExternalLink from 'components/shared/ExternalLink'
 
 import Logo from './Logo'
 import ResourcesDropdownMobile from './Mobile/ResourcesDropdownMobile'
-import { navDropdownItem, navMenuItemStyles, topLeftNavStyles } from './styles'
+import {
+  navDropdownItem,
+  navMenuItemStyles,
+  topLeftNavStyles,
+} from './navStyles'
 
 export function NavMenuItem({
   text,

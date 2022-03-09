@@ -7,7 +7,7 @@ import MobileCollapse from './Mobile/MobileCollapse'
 import { TopLeftNavItems } from './MenuItems'
 import NavLanguageSelector from './NavLanguageSelector'
 import ThemePicker from './ThemePicker'
-import { topNavStyles, topRightNavStyles } from './styles'
+import { topNavStyles, topRightNavStyles } from './navStyles'
 
 export default function Navbar() {
   const isMobile = useMobile()
