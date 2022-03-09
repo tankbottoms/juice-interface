@@ -37,7 +37,7 @@ export default function NavLanguageSelector({
       return null
     }
     return (
-      <Select.Option key={lang} class="language-select-option" value={lang}>
+      <Select.Option key={lang} value={lang}>
         <div>{mobile ? Languages[lang].long : Languages[lang].short}</div>
       </Select.Option>
     )

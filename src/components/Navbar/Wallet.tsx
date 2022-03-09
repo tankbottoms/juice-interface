@@ -23,19 +23,11 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
 
   const { onLogOut } = useContext(NetworkContext)
 
-  const menuStyle: CSSProperties = {
-    padding: 0,
-    borderRadius: 1,
-    backgroundColor: colors.background.l0,
-    border: '1px solid ' + colors.stroke.tertiary,
-    boxShadow: juiceBoxShadow(isDarkMode),
-  }
-
   const menuItemPadding = '10px 15px'
 
   const menu = (
-    <Menu style={menuStyle}>
-      <Menu.Item style={{ padding: menuItemPadding }}>
+    <Menu>
+      <Menu.Item style={{ padding: menuItemPadding }} key={0}>
         <EtherscanLink value={userAddress} type="address" shortened={true} />{' '}
         <CopyTextButton value={userAddress} style={{ zIndex: 1 }} />
       </Menu.Item>
@@ -47,6 +39,7 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
           display: 'flex',
           justifyContent: 'space-between',
         }}
+        key={1}
       >
         <Trans>Disconnect</Trans>
         <LogoutOutlined />

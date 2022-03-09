@@ -17,7 +17,7 @@ import ThemePicker from './ThemePicker'
 import Logo from './Logo'
 import Account from './Account'
 import NavLanguageSelector from './NavLanguageSelector'
-import { menu } from './MenuItems'
+import { TopLeftNavItems } from './MenuItems'
 
 export default function MobileCollapse() {
   const [activeKey, setActiveKey] = useState<0 | undefined>()
@@ -58,7 +58,12 @@ export default function MobileCollapse() {
             </Space>
           }
         >
-          {menu(() => setActiveKey(activeKey === 0 ? undefined : 0))}
+          <TopLeftNavItems
+            isMobile={true}
+            onClickMenuItems={() =>
+              setActiveKey(activeKey === 0 ? undefined : 0)
+            }
+          />
           <div className="nav-subsection">
             <NavLanguageSelector mobile={true} />
             <ThemePicker mobile={true} />
