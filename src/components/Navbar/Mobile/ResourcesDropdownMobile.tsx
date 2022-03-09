@@ -1,4 +1,4 @@
-import { t } from '@lingui/macro'
+import { t, Trans } from '@lingui/macro'
 import { Collapse, Space } from 'antd'
 import CollapsePanel from 'antd/lib/collapse/CollapsePanel'
 import ExternalLink from 'components/shared/ExternalLink'
@@ -16,7 +16,12 @@ function ResourcesItem({
   onClick?: VoidFunction
 }) {
   return (
-    <ExternalLink className="nav-dropdown-item" href={route} onClick={onClick}>
+    <ExternalLink
+      className="nav-dropdown-item"
+      href={route}
+      onClick={onClick}
+      style={{ fontWeight: 400 }}
+    >
       {text}
     </ExternalLink>
   )
@@ -31,7 +36,11 @@ export default function ResourcesDropdownMobile() {
 
   return (
     <div className="resources-dropdown">
-      <Collapse style={{ border: 'none', marginLeft: 3 }} activeKey={activeKey}>
+      <Collapse
+        style={{ border: 'none', marginLeft: 3 }}
+        activeKey={activeKey}
+        defaultActiveKey={undefined}
+      >
         <CollapsePanel
           style={{
             border: 'none',
@@ -45,7 +54,9 @@ export default function ResourcesDropdownMobile() {
                 e.stopPropagation()
               }}
             >
-              <span style={{ fontWeight: 600 }}>Resources</span>
+              <span style={{ fontWeight: 600 }}>
+                <Trans>Resources</Trans>
+              </span>
               {activeKey === 0 ? (
                 <UpOutlined style={{ fontSize: iconSize }} />
               ) : (

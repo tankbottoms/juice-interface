@@ -53,7 +53,7 @@ export default function Wallet({ userAddress }: { userAddress: string }) {
   return (
     <Dropdown
       overlay={menu}
-      placement="bottomRight"
+      placement={!isMobile ? 'bottomRight' : 'bottomCenter'}
       overlayStyle={{ padding: 0 }}
     >
       <div

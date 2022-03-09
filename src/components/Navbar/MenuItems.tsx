@@ -89,10 +89,10 @@ const resourcesMenu = (
 )
 
 export function TopLeftNavItems({
-  isMobile,
+  mobile,
   onClickMenuItems,
 }: {
-  isMobile?: boolean
+  mobile?: boolean
   onClickMenuItems?: VoidFunction
 }) {
   const [resourcesOpen, setResourcesOpen] = useState<boolean>(false)
@@ -102,12 +102,12 @@ export function TopLeftNavItems({
   }
   return (
     <Space
-      size={isMobile ? 0 : 'large'}
+      size={mobile ? 0 : 'large'}
       className="top-left-nav"
-      style={isMobile ? { position: 'static' } : {}}
-      direction={isMobile ? 'vertical' : 'horizontal'}
+      style={mobile ? { position: 'static' } : {}}
+      direction={mobile ? 'vertical' : 'horizontal'}
     >
-      {!isMobile && (
+      {!mobile && (
         <a href="/" style={{ display: 'inline-block' }}>
           {<Logo />}
         </a>
@@ -136,7 +136,7 @@ export function TopLeftNavItems({
         route="https://discord.gg/6jXrJSyDFf"
       />
 
-      {!isMobile && (
+      {!mobile && (
         <Dropdown
           overlay={resourcesMenu}
           overlayStyle={{ padding: 0 }}

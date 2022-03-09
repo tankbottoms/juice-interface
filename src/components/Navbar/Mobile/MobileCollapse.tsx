@@ -21,11 +21,14 @@ import ThemePickerMobile from './ThemePickerMobile'
 import ResourcesDropdownMobile from './ResourcesDropdownMobile'
 
 export default function MobileCollapse() {
-  const [activeKey, setActiveKey] = useState<0 | undefined>()
+  const [navOpen, setNavOpen] = useState<0 | undefined>()
   const {
     theme: { colors },
   } = useContext(ThemeContext)
   const { signingProvider, onLogOut } = useContext(NetworkContext)
+
+  // Close collapse when clicking below it
+  window.addEventListener('click', () => setNavOpen(undefined), false)
   return (
     <Header
       className="top-nav top-nav-mobile"
@@ -33,7 +36,7 @@ export default function MobileCollapse() {
         e.stopPropagation()
       }}
     >
-      <Collapse style={{ border: 'none' }} activeKey={activeKey}>
+      <Collapse style={{ border: 'none' }} activeKey={navOpen}>
         <CollapsePanel
           style={{ border: 'none' }}
           key={0}
@@ -41,7 +44,7 @@ export default function MobileCollapse() {
           header={
             <Space
               onClick={e => {
-                setActiveKey(activeKey === 0 ? undefined : 0)
+                setNavOpen(navOpen === 0 ? undefined : 0)
                 e.stopPropagation()
               }}
             >
@@ -60,18 +63,16 @@ export default function MobileCollapse() {
           }
         >
           <TopLeftNavItems
-            isMobile={true}
-            onClickMenuItems={() =>
-              setActiveKey(activeKey === 0 ? undefined : 0)
-            }
+            mobile
+            onClickMenuItems={() => setNavOpen(navOpen === 0 ? undefined : 0)}
           />
           <ResourcesDropdownMobile />
           <div className="nav-subsection">
-            <NavLanguageSelector mobile={true} />
+            <NavLanguageSelector mobile />
             <ThemePickerMobile />
-            <FeedbackFormBtn mobile={true} />
+            <FeedbackFormBtn mobile />
           </div>
-          <Account mobile={true} />
+          <Account mobile />
           {signingProvider ? (
             <div
               style={{
