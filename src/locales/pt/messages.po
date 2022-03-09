@@ -369,6 +369,7 @@ msgid "Block number"
 msgstr ""
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Blog"
 msgstr "Blog"
 
@@ -527,6 +528,7 @@ msgstr "Estratégia personalizada"
 msgid "Cycle #{0}"
 msgstr "Ciclo #{0}"
 
+#: src/components/Navbar/Mobile/ThemePickerMobile.tsx
 #: src/components/Navbar/ThemePicker.tsx
 msgid "Dark theme"
 msgstr "Tema escuro"
@@ -565,8 +567,7 @@ msgstr "Detalhes"
 msgid "Disabled"
 msgstr "Desabilitado"
 
-#: src/components/Navbar/MobileCollapse.tsx
-#: src/components/Navbar/OptionsCollapse.tsx
+#: src/components/Navbar/Mobile/MobileCollapse.tsx
 #: src/components/Navbar/Wallet.tsx
 msgid "Disconnect"
 msgstr "Desconectar"
@@ -615,6 +616,7 @@ msgid "Do I have to make my project open source to use Juicebox as its business 
 msgstr "Tenho que fazer meu projeto de código aberto para usar Juicebox como seu modelo de negócios?"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Docs"
 msgstr "Documentos"
 
@@ -967,6 +969,7 @@ msgstr "Último"
 msgid "Latest payments"
 msgstr "Últimos pagamentos"
 
+#: src/components/Navbar/Mobile/ThemePickerMobile.tsx
 #: src/components/Navbar/ThemePicker.tsx
 msgid "Light theme"
 msgstr "Tema claro"
@@ -1196,6 +1199,7 @@ msgid "Peach's Juicebox Stand"
 msgstr "Estande do Juicebox da Peach"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Peel"
 msgstr "Peel"
 
@@ -1212,6 +1216,7 @@ msgid "Percentages must add up to 100% or less"
 msgstr "Porcentagens devem atingir 100% ou menos"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Podcast"
 msgstr "Podcast"
 
@@ -1419,6 +1424,7 @@ msgid "Reserves"
 msgstr "Reservas"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Resources"
 msgstr "Recursos"
 
@@ -2025,6 +2031,7 @@ msgid "Withdraw funds"
 msgstr "Sacar fundos"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Workspace"
 msgstr "Área de trabalho"
 

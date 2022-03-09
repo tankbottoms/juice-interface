@@ -11,7 +11,18 @@ export default function Account({ mobile }: { mobile?: boolean }) {
     useContext(NetworkContext)
 
   return (
-    <Row className="account-badge" gutter={10} align="middle">
+    <Row
+      gutter={10}
+      align="middle"
+      style={
+        mobile
+          ? {
+              margin: 'auto',
+              marginTop: 22,
+            }
+          : {}
+      }
+    >
       {!signingProvider ? (
         <div
           style={{

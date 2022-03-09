@@ -369,6 +369,7 @@ msgid "Block number"
 msgstr "Blok numarası"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Blog"
 msgstr "Blog"
 
@@ -527,6 +528,7 @@ msgstr "Özel strateji"
 msgid "Cycle #{0}"
 msgstr "Döngü #{0}"
 
+#: src/components/Navbar/Mobile/ThemePickerMobile.tsx
 #: src/components/Navbar/ThemePicker.tsx
 msgid "Dark theme"
 msgstr "Koyu tema"
@@ -565,8 +567,7 @@ msgstr "Detaylar"
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: src/components/Navbar/MobileCollapse.tsx
-#: src/components/Navbar/OptionsCollapse.tsx
+#: src/components/Navbar/Mobile/MobileCollapse.tsx
 #: src/components/Navbar/Wallet.tsx
 msgid "Disconnect"
 msgstr "Bağlantıyı kes"
@@ -615,6 +616,7 @@ msgid "Do I have to make my project open source to use Juicebox as its business 
 msgstr "Juicebox'ı iş modeli olarak kullanmak için projemi açık kaynak yapmak zorunda mıyım?"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Docs"
 msgstr "Dokümanlar"
 
@@ -967,6 +969,7 @@ msgstr "En son"
 msgid "Latest payments"
 msgstr "Son ödemeler"
 
+#: src/components/Navbar/Mobile/ThemePickerMobile.tsx
 #: src/components/Navbar/ThemePicker.tsx
 msgid "Light theme"
 msgstr "Aydınlık tema"
@@ -1196,6 +1199,7 @@ msgid "Peach's Juicebox Stand"
 msgstr "Peach'in Juicebox standı"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Peel"
 msgstr ""
 
@@ -1212,6 +1216,7 @@ msgid "Percentages must add up to 100% or less"
 msgstr "Yüzdelerin toplamı %100 veya daha az olmalıdır"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Podcast"
 msgstr "Podcast"
 
@@ -1419,6 +1424,7 @@ msgid "Reserves"
 msgstr "Ayrılanlar"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Resources"
 msgstr "Kaynaklar"
 
@@ -2025,6 +2031,7 @@ msgid "Withdraw funds"
 msgstr "Fonları çek"
 
 #: src/components/Navbar/MenuItems.tsx
+#: src/components/Navbar/Mobile/ResourcesDropdownMobile.tsx
 msgid "Workspace"
 msgstr "Çalışma Alan"
 

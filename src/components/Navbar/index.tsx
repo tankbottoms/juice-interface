@@ -7,14 +7,15 @@ import MobileCollapse from './Mobile/MobileCollapse'
 import { TopLeftNavItems } from './MenuItems'
 import NavLanguageSelector from './NavLanguageSelector'
 import ThemePicker from './ThemePicker'
+import { topNavStyles, topRightNavStyles } from './styles'
 
 export default function Navbar() {
   const isMobile = useMobile()
   return !isMobile ? (
-    <Header className="top-nav">
+    <Header className="top-nav" style={{ ...topNavStyles }}>
       <TopLeftNavItems />
 
-      <Space className="top-right-nav" size={0}>
+      <Space size={0} style={{ ...topRightNavStyles }}>
         <NavLanguageSelector />
         <ThemePicker />
         <Account />

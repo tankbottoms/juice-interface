@@ -19,6 +19,7 @@ import NavLanguageSelector from '../NavLanguageSelector'
 import { TopLeftNavItems } from '../MenuItems'
 import ThemePickerMobile from './ThemePickerMobile'
 import ResourcesDropdownMobile from './ResourcesDropdownMobile'
+import { mobileNavSubsectionStyles, topNavStyles } from '../styles'
 
 export default function MobileCollapse() {
   const [navOpen, setNavOpen] = useState<0 | undefined>()
@@ -34,6 +35,12 @@ export default function MobileCollapse() {
       className="top-nav top-nav-mobile"
       onClick={e => {
         e.stopPropagation()
+      }}
+      style={{
+        ...topNavStyles,
+        padding: '16px 8px',
+        width: '100%',
+        position: 'fixed',
       }}
     >
       <Collapse style={{ border: 'none' }} activeKey={navOpen}>
@@ -67,7 +74,10 @@ export default function MobileCollapse() {
             onClickMenuItems={() => setNavOpen(navOpen === 0 ? undefined : 0)}
           />
           <ResourcesDropdownMobile />
-          <div className="nav-subsection">
+          <div
+            className="nav-subsection"
+            style={{ ...mobileNavSubsectionStyles }}
+          >
             <NavLanguageSelector mobile />
             <ThemePickerMobile />
             <FeedbackFormBtn mobile />

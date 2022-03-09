@@ -8,6 +8,7 @@ import ExternalLink from 'components/shared/ExternalLink'
 
 import Logo from './Logo'
 import ResourcesDropdownMobile from './Mobile/ResourcesDropdownMobile'
+import { navDropdownItem, navMenuItemStyles, topLeftNavStyles } from './styles'
 
 export function NavMenuItem({
   text,
@@ -30,6 +31,7 @@ export function NavMenuItem({
             rel: 'noreferrer',
           }
         : {})}
+      style={navMenuItemStyles}
     >
       {text}
     </a>
@@ -51,6 +53,7 @@ export function DropdownItem({
         className="nav-dropdown-item"
         href={route}
         onClick={onClick}
+        style={navDropdownItem}
       >
         {text}
       </ExternalLink>
@@ -59,7 +62,7 @@ export function DropdownItem({
 }
 
 const resourcesMenu = (
-  <Menu style={{ marginTop: -16 }}>
+  <Menu style={{ marginTop: -16, marginLeft: -6 }}>
     <DropdownItem
       key="docs"
       text={t`Docs`}
@@ -104,7 +107,7 @@ export function TopLeftNavItems({
     <Space
       size={mobile ? 0 : 'large'}
       className="top-left-nav"
-      style={mobile ? { position: 'static' } : {}}
+      style={{ ...topLeftNavStyles, position: mobile ? 'static' : 'absolute' }}
       direction={mobile ? 'vertical' : 'horizontal'}
     >
       {!mobile && (
@@ -145,6 +148,7 @@ export function TopLeftNavItems({
           <div
             className="nav-menu-item hover-opacity"
             onClick={() => setResourcesOpen(!resourcesOpen)}
+            style={{ ...navMenuItemStyles }}
           >
             <Trans>Resources</Trans>
             {resourcesOpen ? (

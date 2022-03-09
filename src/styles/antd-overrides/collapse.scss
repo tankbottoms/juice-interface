@@ -41,19 +41,6 @@
 // Top Nav Select
 // Right side of the top nav
 .top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--background-l0);
-
-  .nav-menu-item {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    color: var(--text-primary) !important;
-  }
-
   // Resources dropdown and options (dotdotdot) menu
   .ant-collapse-header {
     color: var(--text-primary) !important;
@@ -88,9 +75,6 @@
 }
 
 .top-nav-mobile {
-  padding: 16px 8px;
-  width: 100%;
-  position: fixed;
   .ant-collapse {
     width: 100%;
     margin-bottom: 4px;
@@ -116,22 +100,10 @@
   }
 
   .nav-subsection {
-    padding-left: 15px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     > div {
       display: flex;
       align-items: center;
     }
-  }
-  .theme-picker {
-    justify-content: flex-start;
-  }
-  .account-badge {
-    margin: auto !important;
-    margin-top: 22px !important;
   }
   .resources-dropdown .ant-collapse-content-box {
     padding: 0 6px;
@@ -141,41 +113,6 @@
     a {
       height: 40px;
     }
-  }
-}
-
-// Logo and links
-.top-left-nav {
-  flex: 1;
-  position: absolute;
-}
-
-// Dotdotdot menu and wallet/balance
-.top-right-nav {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 50px;
-  margin-right: 10px;
-}
-
-.theme-picker {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  justify-content: 'space-evenly';
-}
-
-// Dotdotdot menu in top right
-.top-nav-options {
-  .ant-collapse {
-    width: 110px;
-    text-align: right;
-    margin-right: -10px;
-  }
-  .ant-collapse-content {
-    width: 170px;
-    margin-right: -22px;
   }
 }
 
