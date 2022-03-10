@@ -112,7 +112,10 @@ export default function TrendingProjectCard({
           >
             <div style={rankStyle}>{rank}</div>
             <ProjectLogo
-              uri={metadata.logoUri}
+              uri={metadata.logoUri?.replace(
+                'gateway.pinata.cloud',
+                'cloudflare-ipfs.com',
+              )}
               name={metadata.name}
               size={size === 'sm' ? 70 : 110}
             />

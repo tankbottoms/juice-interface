@@ -63,7 +63,10 @@ export default function ConfirmDeployProject() {
             <Statistic title={t`Logo`} value={' '} />
             <div style={{ marginTop: -20 }}>
               <ProjectLogo
-                uri={editingProject?.metadata.logoUri}
+                uri={editingProject?.metadata.logoUri?.replace(
+                  'gateway.pinata.cloud',
+                  'cloudflare-ipfs.com',
+                )}
                 name={editingProject?.metadata.name}
                 size={isMobile ? 50 : 80}
               />

@@ -93,7 +93,10 @@ export default function ConfirmDeployV2ProjectModal({
               <Statistic title={t`Logo`} value={' '} />
               <div style={{ marginTop: -20 }}>
                 <ProjectLogo
-                  uri={projectMetadata?.logoUri}
+                  uri={projectMetadata?.logoUri?.replace(
+                    'gateway.pinata.cloud',
+                    'cloudflare-ipfs.com',
+                  )}
                   name={projectMetadata?.name}
                   size={isMobile ? 50 : 80}
                 />

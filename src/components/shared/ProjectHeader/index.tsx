@@ -43,7 +43,10 @@ export default function ProjectHeader({
           }}
         >
           <ProjectLogo
-            uri={metadata?.logoUri}
+            uri={metadata?.logoUri?.replace(
+              'gateway.pinata.cloud',
+              'cloudflare-ipfs.com',
+            )}
             name={metadata?.name}
             size={headerHeight}
           />
