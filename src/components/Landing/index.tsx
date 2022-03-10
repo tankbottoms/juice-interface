@@ -387,7 +387,7 @@ export default function Landing() {
             <Col xs={24} md={10}>
               <img
                 style={{ maxWidth: '100%' }}
-                src="/assets/blueberry-ol.png"
+                src="/assets/blueberry_fire.png"
                 alt="Sexy blueberry with bright pink lipstick spraying a can of spraypaint"
               />
             </Col>

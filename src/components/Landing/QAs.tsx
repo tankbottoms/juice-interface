@@ -21,6 +21,43 @@ const JBDiscordLink = ({ children }: PropsWithChildren<{}>) => (
 export default function QAs() {
   return [
     {
+      q: <Trans>What does the fire mean; what is Movement DAO?</Trans>,
+      a: [
+        <Trans>
+          This L2 Juicebox v1.1 experiment was undertaken by{' '}
+          <ExternalLink href="https://move.xyz">Movement DAO</ExternalLink> with
+          the kind help from the cool-cat-developers of{' '}
+          <ExternalLink href="https://juicebox.money">JuiceboxDAO</ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://wagmistudios.info">
+            WAGMI Studios
+          </ExternalLink>
+          , and the community members who make everything happen.
+        </Trans>,
+        <Trans>
+          Movement DAO is a community funded, operated, and deployed Web3
+          endowment whose purpose is to facilitate the incubation, funding and
+          sustenance of decentralized communities regardless of purpose - from
+          an innovative start-up to a public good, as long as communities form
+          and take action. Movement DAO is building applications and tools
+          within and on Juicebox v2 to bring crypto treasury management everyone
+          by enabling affordable L2 solutions (Polygon, Optimism), simplifying
+          creating and deploying NFT collections, curating and selling digital
+          assets, and built-in treasury tools for decentralized finance, and
+          liquidity management. To learn more about how your project can
+          leverage the Movement endowment come visit us in Discord.
+        </Trans>,
+        <Trans>
+          <ExternalLink href="https://move.xyz">Website</ExternalLink>,{' '}
+          <ExternalLink href="https://twitter.com/move_xyz">
+            Twitter
+          </ExternalLink>
+          ,{' '}
+          <ExternalLink href="https://discord.gg/movexyz">Discord</ExternalLink>
+        </Trans>,
+      ],
+    },
+    {
       q: <Trans>Who funds Juicebox projects?</Trans>,
       a: [
         <Trans>

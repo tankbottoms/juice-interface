@@ -6,7 +6,7 @@ export default function V2MainnetWarning() {
     <div>
       <img
         style={{ maxWidth: 200, marginBottom: '2rem' }}
-        src="/assets/blueberry-ol.png"
+        src="/assets/blueberry_fire.png"
         alt="Sexy blueberry with bright pink lipstick spraying a can of spraypaint"
       />
       <h3>
