@@ -78,11 +78,11 @@ export default function TokenAMMPriceRow({
       {!loading &&
         (WETHPrice ? (
           <Tooltip
-            title={t`${tokenSymbol}/ETH exchange rate on ${exchangeName}.`}
+            title={t`${tokenSymbol}/MATIC exchange rate on ${exchangeName}.`}
             overlayInnerStyle={{ ...fontStyle }}
           >
             <ExternalLink href={exchangeLink} style={{ fontWeight: 400 }}>
-              {`${formattedNum(WETHPrice)} ${tokenSymbol}/ETH`}
+              {`${formattedNum(WETHPrice)} ${tokenSymbol}/MATIC`}
               <LinkOutlined style={{ marginLeft: '0.2rem' }} />
             </ExternalLink>
           </Tooltip>

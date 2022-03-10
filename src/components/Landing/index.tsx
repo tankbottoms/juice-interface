@@ -187,8 +187,8 @@ export default function Landing() {
                 src={
                   forThemeOption &&
                   forThemeOption({
-                    [ThemeOption.dark]: '/assets/banana-od.png',
-                    [ThemeOption.light]: '/assets/banana-ol.png',
+                    [ThemeOption.dark]: '/assets/banana-ol-polygon.png',
+                    [ThemeOption.light]: '/assets/banana-ol-polygon.png',
                   })
                 }
                 alt="Chill banana drinking juice"
@@ -448,8 +448,8 @@ export default function Landing() {
         <div style={{ fontSize: 20, marginBottom: 20 }}>🧃⚡️</div>
         <h3 style={{ color: 'white', margin: 0 }}>
           <Trans>
-            Big ups to the Ethereum community for crafting the infrastructure
-            and economy to make Juicebox possible.
+            Big ups to the Polygon community for crafting the infrastructure and
+            economy to make Juicebox possible.
           </Trans>
         </h3>
       </div>

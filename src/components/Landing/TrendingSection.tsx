@@ -52,7 +52,7 @@ export default function TrendingSection() {
           <img
             className="hide-mobile hide-tablet"
             style={{ height: 550 }}
-            src="/assets/green_orange.png"
+            src="/assets/green_orange_flame-01.png"
             alt="Green orange singing"
           />
         </Col>

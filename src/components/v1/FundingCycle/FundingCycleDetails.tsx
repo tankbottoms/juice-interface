@@ -198,7 +198,7 @@ export default function FundingCycleDetails({
               capitalize: false,
               plural: true,
             })}
-            /ETH
+            /MATIC
           </Trans>
         </Descriptions.Item>
 

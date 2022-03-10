@@ -361,7 +361,7 @@ msgid "Beneficiary address"
 msgstr "Dirección de beneficiario"
 
 #: src/components/Landing/index.tsx
-msgid "Big ups to the Ethereum community for crafting the infrastructure and economy to make Juicebox possible."
+msgid "Big ups to the Polygon community for crafting the infrastructure and economy to make Juicebox possible."
 msgstr "Dar las gracias a la comunidad Ethereum por fabricar la infraestructura y la economía para hacer posible Juicebox."
 
 #: src/components/v1/V1Project/modals/DownloadParticipantsModal.tsx
@@ -2262,8 +2262,8 @@ msgid "{0}% to {1}"
 msgstr "{0}% a {1}"
 
 #: src/components/v1/FundingCycle/FundingCycleDetails.tsx
-msgid "{0}/ETH"
-msgstr "{0}/ETH"
+msgid "{0}/MATIC"
+msgstr "{0}/MATIC"
 
 #: src/components/v1/V1Project/FundingCycles/FundingHistory.tsx
 msgid "{0}/{1} withdrawn"
@@ -2298,8 +2298,8 @@ msgid "{paymentCount, plural, one {# payment} other {# payments}}"
 msgstr "{paymentCount, plural, one {# pago} other {# pagos}}"
 
 #: src/components/shared/AMMPrices/TokenAMMPriceRow.tsx
-msgid "{tokenSymbol}/ETH exchange rate on {exchangeName}."
-msgstr "Tipo de cambio de {tokenSymbol}/ETH en {exchangeName}."
+msgid "{tokenSymbol}/MATIC exchange rate on {exchangeName}."
+msgstr "Tipo de cambio de {tokenSymbol}/MATIC en {exchangeName}."
 
 #: src/components/v1/V1Project/Rewards/index.tsx
 msgid "{tokensLabel} are distributed to anyone who pays this project. If the project has set a funding target, tokens can be redeemed for a portion of the project's overflow whether or not they have been claimed yet."

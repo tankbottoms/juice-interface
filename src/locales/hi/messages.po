@@ -308,7 +308,7 @@ msgid "Beneficiary address"
 msgstr ""
 
 #: src/components/Landing/index.tsx
-msgid "Big ups to the Ethereum community for crafting the infrastructure and economy to make Juicebox possible."
+msgid "Big ups to the Polygon community for crafting the infrastructure and economy to make Juicebox possible."
 msgstr ""
 
 #: src/components/Project/modals/DownloadParticipantsModal.tsx
@@ -1989,7 +1989,7 @@ msgid "{0}% to {1}"
 msgstr ""
 
 #: src/components/FundingCycle/FundingCycleDetails.tsx
-msgid "{0}/ETH"
+msgid "{0}/MATIC"
 msgstr ""
 
 #: src/components/Project/FundingCycles/FundingHistory.tsx
@@ -2021,7 +2021,7 @@ msgid "{paymentCount, plural, one {# payment} other {# payments}}"
 msgstr ""
 
 #: src/components/shared/AMMPrices/TokenAMMPriceRow.tsx
-msgid "{tokenSymbol}/ETH exchange rate on {exchangeName}."
+msgid "{tokenSymbol}/MATIC exchange rate on {exchangeName}."
 msgstr ""
 
 #: src/components/Project/Rewards/index.tsx

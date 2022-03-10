@@ -179,13 +179,20 @@ export default function QAs() {
       a: [
         <Trans>
           A mechanism like Juicebox where upfront financial commitments should
-          be honored over time is only guaranteed within an ecosystem like
-          Ethereum.
+          be honored over time was only guaranteed within an ecosystem like
+          Ethereum; recently other options have become available on so-called{' '}
+          <ExternalLink href="https://ethereum.org/en/developers/docs/scaling/">
+            Layer 2
+          </ExternalLink>
+          .
         </Trans>,
         <Trans>
-          Ethereum provides a public environment where internet apps like
-          Juicebox can run in a permission-less, trustless, and unstoppable
-          fashion.
+          Just like how Ethereum provides a public environment where internet
+          apps like Juicebox can run in a permission-less, trustless, and
+          unstoppable fashion, Polygon shares many of the same benefits while
+          providing reduction of gas fees. Scaling solutions such as Polygon
+          dramatically reduce various infrastructure costs, and Juicebox will be
+          brought to more L2 solutions as they gain popularity.
         </Trans>,
         <Trans>
           This means that anyone can see the code that they're using, anyone can
@@ -289,16 +296,7 @@ export default function QAs() {
     },
     {
       q: <Trans>Will it work on L2s?</Trans>,
-      a: [
-        <Trans>
-          That's the plan, but the core Juicebox contracts will first be
-          deployed to Ethereum Mainnet.
-        </Trans>,
-        <Trans>
-          The contract team will soon start working on L2 payment terminals for
-          Juicebox projects.
-        </Trans>,
-      ],
+      a: [<Trans>We hope so, because this is where this is deployed.</Trans>],
     },
     {
       q: (
