@@ -74,7 +74,7 @@ export default function Payments() {
                 }}
               >
                 <span style={{ fontSize: '1rem', fontWeight: 500 }}>
-                  <CurrencySymbol currency={V1_CURRENCY_ETH} />
+                  <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                   {formatWad(e.amount, { precision: 4 })}
                 </span>
                 <span>

@@ -31,6 +31,8 @@ import { readProvider } from 'constants/readProvider'
 
 import SectionHeader from './SectionHeader'
 import { V1_CURRENCY_ETH } from 'constants/v1/currency'
+import Web3 from 'web3'
+import { readNetwork } from 'constants/networks'
 
 const now = moment.now() - 5 * 60 * 1000 // 5 min ago
 
@@ -84,7 +86,8 @@ export default function BalanceTimeline({ height }: { height: number }) {
     setDomain(undefined)
 
     // Get number of most recent block, and block at start of duration window
-    new EthDater(readProvider)
+    const web3 = new Web3(readNetwork.rpcUrl)
+    new EthDater(web3)
       .getEvery(
         'days',
         //TODO + 0.1 fixes bug where only one block is returned. Needs better fix
@@ -117,6 +120,9 @@ export default function BalanceTimeline({ height }: { height: number }) {
         })
 
         setBlockRefs(newBlockRefs)
+      })
+      .catch((error: any) => {
+        console.log(error.message)
       })
   }, [duration])
 
@@ -490,7 +496,7 @@ export default function BalanceTimeline({ height }: { height: number }) {
                     </div>
                     {payload[0].payload.tapped ? (
                       <div>
-                        -<CurrencySymbol currency={V1_CURRENCY_ETH} />
+                        -<CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                         {payload[0].payload.tapped}
                         <div
                           style={{
@@ -504,7 +510,7 @@ export default function BalanceTimeline({ height }: { height: number }) {
                       </div>
                     ) : (
                       <div>
-                        <CurrencySymbol currency={V1_CURRENCY_ETH} />
+                        <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                         {payload[0].payload.value}
                       </div>
                     )}

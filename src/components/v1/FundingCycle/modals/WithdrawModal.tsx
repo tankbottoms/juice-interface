@@ -193,7 +193,7 @@ export default function WithdrawModal({
 
           <div style={{ color: colors.text.primary, marginBottom: 10 }}>
             <span style={{ fontWeight: 500 }}>
-              <CurrencySymbol currency={V1_CURRENCY_ETH} />
+              <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
               {formatWad(
                 amountSubFee(
                   currentFC.currency.eq(V1_CURRENCY_USD)
@@ -225,7 +225,7 @@ export default function WithdrawModal({
           </div>
         ) : (
           <p>
-            <CurrencySymbol currency={V1_CURRENCY_ETH} />
+            <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
             <Trans>
               {formatWad(
                 amountSubFee(

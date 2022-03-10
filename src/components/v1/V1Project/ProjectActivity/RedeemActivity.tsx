@@ -119,7 +119,7 @@ export function RedeemActivity({ pageSize }: { pageSize: number }) {
               </div>
 
               <div style={{ color: colors.text.secondary }}>
-                <CurrencySymbol currency={V1_CURRENCY_ETH} />
+                <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                 {formatWad(e.returnAmount, { precision: 4 })} overflow received
               </div>
             </div>

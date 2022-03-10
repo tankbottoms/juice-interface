@@ -174,7 +174,7 @@ export default function RedeemModal({
             <Trans>
               Currently worth:{' '}
               <span>
-                <CurrencySymbol currency={V1_CURRENCY_ETH} />
+                <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                 {formatWad(maxClaimable, { precision: 4 })}
               </span>
             </Trans>
