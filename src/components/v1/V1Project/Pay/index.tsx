@@ -156,7 +156,7 @@ export default function Pay() {
             <div style={{ fontSize: '.7rem' }}>
               <Trans>
                 Paid as <CurrencySymbol currency={V1_CURRENCY_ETH} />
-              </Trans>
+              </Trans>{' '}
               {formatWad(weiPayAmt) || '0'}
             </div>
           )}

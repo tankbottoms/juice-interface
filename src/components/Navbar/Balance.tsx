@@ -30,7 +30,7 @@ export default function Balance({
         color: colors.text.tertiary,
       }}
     >
-      <CurrencySymbol currency={V1_CURRENCY_ETH} />
+      <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
       {formatWad(balance, { precision: 4 }) ?? '--'}
       {showEthPrice && (
         <div style={{ color: colors.text.tertiary }}>

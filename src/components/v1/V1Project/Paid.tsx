@@ -90,7 +90,7 @@ export default function Paid() {
             <Tooltip
               title={
                 <span>
-                  <CurrencySymbol currency={V1_CURRENCY_ETH} />
+                  <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
                   {formatWad(converter.usdToWei(fromWad(amt)), {
                     precision: 2,
                     padEnd: true,
@@ -98,7 +98,7 @@ export default function Paid() {
                 </span>
               }
             >
-              <CurrencySymbol currency={V1_CURRENCY_USD} />{' '}
+              <CurrencySymbol currency={V1_CURRENCY_USD} />
               {formatWad(amt, { precision: 2, padEnd: true })}
             </Tooltip>
           </span>
