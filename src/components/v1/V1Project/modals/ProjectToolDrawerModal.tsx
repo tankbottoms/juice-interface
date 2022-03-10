@@ -117,7 +117,7 @@ export default function ProjectToolDrawerModal({
     // https://docs.github.com/en/rest/reference/issues#create-an-issue
     // Do this first, in case the user closes the page before the on-chain tx completes
     axios.post(
-      'https://api.github.com/repos/jbx-protocol/juice-interface/issues',
+      'https://api.github.com/repos/tankbottoms/juice-interface/issues',
       {
         title: `[${archived ? 'ARCHIVE' : 'UNARCHIVE'}] Project: "${
           metadata?.name

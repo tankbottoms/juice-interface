@@ -24,7 +24,7 @@ export default function PayWarningModal({
         <Trans>Heads up</Trans>
       </h2>
       <p style={{ fontWeight: 500 }}>
-        <ExternalLink href="https://github.com/jbx-protocol/juice-contracts">
+        <ExternalLink href="https://github.com/tankbottoms/juice-contracts-v2">
           <Trans>Juicebox contracts</Trans>
         </ExternalLink>{' '}
         <Trans>

@@ -314,7 +314,7 @@ export default function Landing() {
                       ask questions
                     </ExternalLink>
                     ,{' '}
-                    <ExternalLink href="https://github.com/jbx-protocol/juice-interface">
+                    <ExternalLink href="https://github.com/tankbottoms/juice-interface">
                       check out the code
                     </ExternalLink>
                     , and understand the risks!

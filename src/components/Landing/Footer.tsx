@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
       <div style={{ ...footerLinksStyles, display: 'flex' }}>
         {link('Discord', 'https://discord.gg/6jXrJSyDFf')}
-        {link('GitHub', 'https://github.com/jbx-protocol/juice-interface')}
+        {link('GitHub', 'https://github.com/tankbottoms/juice-interface')}
         {link('Twitter', 'https://twitter.com/juiceboxETH')}
       </div>
     </div>
