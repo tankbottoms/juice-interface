@@ -32,7 +32,8 @@ export default function QAs() {
           <ExternalLink href="https://wagmistudios.info">
             WAGMI Studios
           </ExternalLink>
-          , and the community members who make everything happen.
+          , and Peel DAO (more on them later), and the community members who
+          make everything happen.
         </Trans>,
         <Trans>
           Movement DAO is a community funded, operated, and deployed Web3
