@@ -187,8 +187,8 @@ export default function Landing() {
                 src={
                   forThemeOption &&
                   forThemeOption({
-                    [ThemeOption.dark]: '/assets/banana-ol-polygon.png',
-                    [ThemeOption.light]: '/assets/banana-ol-polygon.png',
+                    [ThemeOption.dark]: '/assets/dark-theme-banny-matic.png',
+                    [ThemeOption.light]: '/assets/light-theme-banny-matic.png',
                   })
                 }
                 alt="Chill banana drinking juice"

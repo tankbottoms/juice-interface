@@ -35,8 +35,7 @@ export default function ETHAmount({
   if (amount) {
     return (
       <Tooltip title={<ETHToUSD ethAmount={amount} />}>
-        <CurrencySymbol currency={V1_CURRENCY_ETH} />
-        {formattedETHAmount}
+        <CurrencySymbol currency={V1_CURRENCY_ETH} /> {formattedETHAmount}
       </Tooltip>
     )
   }

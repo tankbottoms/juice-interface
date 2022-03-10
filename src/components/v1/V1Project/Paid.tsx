@@ -98,13 +98,13 @@ export default function Paid() {
                 </span>
               }
             >
-              <CurrencySymbol currency={V1_CURRENCY_USD} />
+              <CurrencySymbol currency={V1_CURRENCY_USD} />{' '}
               {formatWad(amt, { precision: 2, padEnd: true })}
             </Tooltip>
           </span>
         ) : (
           <span>
-            <CurrencySymbol currency={V1_CURRENCY_ETH} />
+            <CurrencySymbol currency={V1_CURRENCY_ETH} />{' '}
             {formatWad(amt, { precision: 2, padEnd: true })}
           </span>
         )}

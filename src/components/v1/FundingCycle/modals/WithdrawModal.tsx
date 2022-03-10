@@ -79,10 +79,25 @@ export default function WithdrawModal({
         minAmount,
       },
       {
-        onDone: () => setLoading(false),
-        onConfirmed: () => onConfirmed && onConfirmed(),
+        onDone: () => {
+          console.log('done')
+          setLoading(false)
+        },
+        onCancelled: () => {
+          console.log('Cancelled')
+        },
+        onConfirmed: () => {
+          console.log('confirmed')
+          onConfirmed && onConfirmed()
+        },
       },
     )
+      .then((...args) => {
+        console.log('promise done', ...args)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   return (

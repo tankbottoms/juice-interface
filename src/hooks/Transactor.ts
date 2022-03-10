@@ -105,7 +105,11 @@ export function useTransactor({
         etherscanNetwork = network.name + '.'
       }
 
-      let etherscanTxUrl = 'https://' + etherscanNetwork + 'etherscan.io/tx/'
+      let etherscanTxUrl =
+        'https://' +
+        (etherscanNetwork === 'matic' ? '' : `${etherscanNetwork}.`) +
+        (etherscanNetwork === 'mumbai' ? 'polgonscan.com' : '.etherscan.io') +
+        '/tx/'
       if (network.chainId === 100) {
         etherscanTxUrl = 'https://blockscout.com/poa/xdai/tx/'
       }
@@ -173,7 +177,10 @@ export function useTransactor({
       } catch (e) {
         const message = (e as Error).message
 
-        console.error('Transaction Error:', message)
+        console.error(
+          'Transaction Error:',
+          (e as any)?.data?.message || message,
+        )
 
         let description: string
 
@@ -182,7 +189,7 @@ export function useTransactor({
           json = json.split(', method=')[0]
           description = JSON.parse(json).message || message
         } catch (_) {
-          description = message
+          description = (e as any)?.data?.message || message
         }
 
         notification.error({
