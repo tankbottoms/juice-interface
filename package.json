@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@jbx-protocol/contracts-v1": "https://github.com/tankbottoms/juice-contracts-v1",
+    "@jbx-protocol/contracts-v1": "https://github.com/tankbottoms/juice-contracts-v1#typescript/deploy-matic",
     "@jbx-protocol/contracts-v2": "https://github.com/tankbottoms/juice-contracts-v2",
     "@lingui/cli": "^3.13.0",
     "@lingui/detect-locale": "^3.13.0",
