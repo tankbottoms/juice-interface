@@ -128,9 +128,9 @@ export default function Landing() {
                         borderBottom:
                           '1px solid ' + colors.stroke.action.primary,
                       }}
-                      href="https://ethereum.org/en/what-is-ethereum/"
+                      href="https://polygon.technology/"
                     >
-                      Ethereum
+                      Polygon
                     </ExternalLink>
                     .
                   </Trans>

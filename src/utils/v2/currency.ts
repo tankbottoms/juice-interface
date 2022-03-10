@@ -11,7 +11,7 @@ import {
 } from 'constants/currency'
 
 const V2_CURRENCY_METADATA: Record<V2CurrencyOption, CurrencyMetadata> = {
-  [V2_CURRENCY_ETH]: CURRENCY_METADATA.ETH,
+  [V2_CURRENCY_ETH]: CURRENCY_METADATA.MATIC,
   [V2_CURRENCY_USD]: CURRENCY_METADATA.USD,
 }
 

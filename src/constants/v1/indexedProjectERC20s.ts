@@ -9,4 +9,6 @@ export const indexedProjectERC20s: Partial<Record<NetworkName, number[]>> = {
     201, 202, 204, 214, 218, 221, 223, 224, 227, 232, 233, 237, 246,
   ],
   [NetworkName.rinkeby]: [1, 4, 12, 20],
+  [NetworkName.matic]: [],
+  [NetworkName.mumbai]: [],
 }

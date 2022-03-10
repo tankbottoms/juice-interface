@@ -47,13 +47,13 @@ development.
 
 #### Infura
 
-Juicebox uses [Infura](https://infura.io) to connect to an Ethereum network
+Juicebox uses [Infura](https://infura.io) to connect to an Polygon network
 (mainnet, or one of the testnets).
 
 Take the following steps to create an Infura project for local development:
 
 1. Select **Create New Project** to begin creating a new Infura project.
-1. Select the **Ethereum** option from the **Product** dropdown.
+1. Select the **Polygon** option from the **Product** dropdown.
 1. Enter a **Name** (for example, `juicebox-local`).
 1. Select **Create** to create the project.
 
@@ -61,7 +61,7 @@ Next, copy the following fields into your `.env` file:
 
 - **Project ID**. In the `.env` file, copy the **Project ID** into the
   `REACT_APP_INFURA_ID` variable.
-- **Endpoint**. This is the Ethereum network that will be used for testing. If
+- **Endpoint**. This is the Polygon network that will be used for testing. If
   you don't know which endpoint to use, select **mainnet**. In the `.env` file,
   copy the network name (e.g. 'mainnet', not the url) into the
   `REACT_APP_INFURA_NETWORK` variable.

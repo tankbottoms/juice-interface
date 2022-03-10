@@ -22,12 +22,13 @@ export class CurrencyUtils {
   }
 
   weiToUsd = (wei: BigNumberish | undefined) => {
-    if (!wei || !this.weiPerUsd) return BigNumber.from(0)
+    if (!(wei ? Number(wei.toString()) : wei) || !this.weiPerUsd)
+      return BigNumber.from(0)
 
     try {
-      return BigNumber.from(wei).div(this.weiPerUsd)
+      return BigNumber.from(wei).div(`${this.weiPerUsd}`)
     } catch (e) {
-      console.error("Couldn't convert wei amount", wei.toString(), 'to USD', e)
+      console.error("Couldn't convert wei amount", wei?.toString(), 'to USD', e)
     }
   }
 

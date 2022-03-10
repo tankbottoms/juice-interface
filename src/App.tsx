@@ -26,6 +26,8 @@ function App() {
   const supportedNetworks: NetworkName[] = [
     NetworkName.mainnet,
     NetworkName.rinkeby,
+    NetworkName.matic,
+    NetworkName.mumbai,
   ]
 
   useLayoutEffect(() => {

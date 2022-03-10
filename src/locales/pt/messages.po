@@ -943,7 +943,7 @@ msgid "Juicebox is a governance-minimal protocol. There are only a few levers th
 msgstr "O Juicebox é um protocolo de governança mínima. Existem apenas algumas alavancas que podem ser ajustadas, nenhuma delas impõe mudanças para os usuários sem consentimento. O contrato inteligente de governança do Juicebox pode ajustar essas alavancas."
 
 #: src/components/Landing/QAs.tsx
-msgid "Juicebox is an open protocol on Ethereum that is funded using Juicebox itself. You can check out the contractualized budget specs <0>here</0>."
+msgid "Juicebox is an open protocol on Polygon that is funded using Juicebox itself. You can check out the contractualized budget specs <0>here</0>."
 msgstr "Juicebox é um protocolo aberto no Ethereum que é financiado usando o próprio Juicebox. Você pode conferir as especificações do orçamento contratualizado <0>aqui</0>."
 
 #: src/components/Landing/QAs.tsx
@@ -1215,8 +1215,8 @@ msgid "Podcast"
 msgstr "Podcast"
 
 #: src/components/Landing/index.tsx
-msgid "Powered by public smart contracts on <0>Ethereum</0>."
-msgstr "Alimentado por contratos inteligentes públicos no <0>Ethereum</0>."
+msgid "Powered by public smart contracts on <0>Polygon</0>."
+msgstr "Alimentado por contratos inteligentes públicos no <0>Polygon</0>."
 
 #: src/components/v1/V1Create/index.tsx
 msgid "Preview"
@@ -1760,7 +1760,7 @@ msgid "This text will be displayed to your supporters before they complete their
 msgstr "Este texto será exibido para seus apoiadores antes que eles efetuem o pagamento."
 
 #: src/components/Landing/QAs.tsx
-msgid "This website (juicebox.money) connects to the Juicebox protocol's smart contracts, deployed on the Ethereum network. (note: anyone else can make a website that also connects to these same smart contracts. For now, don't trust any site other than this one to access the Juicebox protocol)."
+msgid "This website (juicebox.money) connects to the Juicebox protocol's smart contracts, deployed on the Polygon network. (note: anyone else can make a website that also connects to these same smart contracts. For now, don't trust any site other than this one to access the Juicebox protocol)."
 msgstr "Este website (juicebox.money) conecta aos contratos inteligentes do protocolo do Juicebox, implantado na rede de Ethereum. (nota: qualquer um pode fazer um website que também conecte com esses mesmos contratos. Por enquanto, não confie em nenhum site que não seja esse para acessar o protocolo do Juicebox)."
 
 #: src/components/v1/V1Create/index.tsx
@@ -1999,7 +1999,7 @@ msgid "Who is Peel?"
 msgstr "Quem é Peel?"
 
 #: src/components/Landing/QAs.tsx
-msgid "Why Ethereum?"
+msgid "Why Polygon?"
 msgstr "Por que Ethereum?"
 
 #: src/components/Landing/QAs.tsx

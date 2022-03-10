@@ -38,7 +38,7 @@ export default function QAs() {
       q: <Trans>What does Juicebox cost?</Trans>,
       a: [
         <Trans>
-          Juicebox is an open protocol on Ethereum that is funded using Juicebox
+          Juicebox is an open protocol on Polygon that is funded using Juicebox
           itself. You can check out the contractualized budget specs{' '}
           <ExternalLink href="https://juicebox.money/#/p/juicebox">
             here
@@ -175,7 +175,7 @@ export default function QAs() {
       ],
     },
     {
-      q: <Trans>Why Ethereum?</Trans>,
+      q: <Trans>Why Polygon?</Trans>,
       a: [
         <Trans>
           A mechanism like Juicebox where upfront financial commitments should
@@ -209,7 +209,7 @@ export default function QAs() {
       a: [
         <Trans>
           This website (juicebox.money) connects to the Juicebox protocol's
-          smart contracts, deployed on the Ethereum network. (note: anyone else
+          smart contracts, deployed on the Polygon network. (note: anyone else
           can make a website that also connects to these same smart contracts.
           For now, don't trust any site other than this one to access the
           Juicebox protocol).

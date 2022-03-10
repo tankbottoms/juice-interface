@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react'
 
-export type CurrencyName = 'ETH' | 'USD'
-export type CurrencySymbol = 'Ξ' | 'US$'
+export type CurrencyName = 'MATIC' | 'USD'
+export type CurrencySymbol = 'MATIC' | 'US$'
 export type CurrencyMetadata = {
   name: CurrencyName
   symbol: CurrencySymbol
@@ -9,9 +9,9 @@ export type CurrencyMetadata = {
 }
 
 export const CURRENCY_METADATA: Record<CurrencyName, CurrencyMetadata> = {
-  ETH: {
-    name: 'ETH',
-    symbol: 'Ξ',
+  MATIC: {
+    name: 'MATIC',
+    symbol: 'MATIC',
     style: {
       fontFamily: 'sans-serif',
     },
