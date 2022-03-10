@@ -761,7 +761,7 @@ export default function V1Create() {
           okText={
             userAddress
               ? signerNetwork
-                ? t`Deploy project on ${signerNetwork}`
+                ? t`Deploy project on ${signerNetwork.toUpperCase()}`
                 : t`Deploy project`
               : t`Connect wallet to deploy`
           }

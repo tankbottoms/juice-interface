@@ -128,7 +128,15 @@ export default function Landing() {
                         borderBottom:
                           '1px solid ' + colors.stroke.action.primary,
                       }}
-                      href="https://polygon.technology/"
+                      href={`https://${
+                        process.env.REACT_APP_INFURA_NETWORK !== 'matic'
+                          ? 'mumbai.'
+                          : ''
+                      }polygonscan.com/address/${
+                        require('@jbx-protocol/contracts-v1/deployments/' +
+                          process.env.REACT_APP_INFURA_NETWORK +
+                          '/TerminalV1_1.json').receipt.from
+                      }`}
                     >
                       Polygon
                     </ExternalLink>
