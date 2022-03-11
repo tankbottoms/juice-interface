@@ -274,7 +274,7 @@ export default function Landing() {
                   objectFit: 'contain',
                   marginBottom: 40,
                 }}
-                src="/assets/pina.png"
+                src="/assets/pina_fire.png"
                 alt="Pinepple geek artist holding a paintbrush"
               />
             </Col>
