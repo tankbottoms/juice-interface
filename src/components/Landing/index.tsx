@@ -438,8 +438,8 @@ export default function Landing() {
           src={
             forThemeOption &&
             forThemeOption({
-              [ThemeOption.dark]: '/assets/orange_lady-od.png',
-              [ThemeOption.light]: '/assets/orange_lady-ol.png',
+              [ThemeOption.dark]: '/assets/orange_dark.png',
+              [ThemeOption.light]: '/assets/orange_light.png',
             })
           }
           alt="Powerlifting orange hitting an olympic deadlift"
