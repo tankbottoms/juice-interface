@@ -41,12 +41,12 @@ export default function QAs() {
           sustenance of decentralized communities regardless of purpose - from
           an innovative start-up to a public good, as long as communities form
           and take action. Movement DAO is building applications and tools
-          within and on Juicebox v2 to bring crypto treasury management everyone
-          by enabling affordable L2 solutions (Polygon, Optimism), simplifying
-          creating and deploying NFT collections, curating and selling digital
-          assets, and built-in treasury tools for decentralized finance, and
-          liquidity management. To learn more about how your project can
-          leverage the Movement endowment come visit us in Discord.
+          within and on Juicebox v2 to bring crypto treasury management to
+          everyone by enabling affordable L2 solutions (Polygon, Optimism),
+          simplifying creating and deploying NFT collections, curating and
+          selling digital assets, and built-in treasury tools for decentralized
+          finance, and liquidity management. To learn more about how your
+          project can leverage the Movement endowment come visit us in Discord.
         </Trans>,
         <Trans>
           <ExternalLink href="https://move.xyz">Website</ExternalLink>,{' '}
