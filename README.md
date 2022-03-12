@@ -2,8 +2,8 @@
 
 Juicebox frontend application.
 
-- Mainnet: https://juicebox.money
-- Rinkeby: https://rinkeby.juicebox.money
+- Matic (Polygon's Mainnet): https://matic.tankbottoms.xyz
+- Mumbai (Polygon's Testnet): https://mumbai.tankbottoms.xyz
 
 ## Suggest a feature
 
@@ -123,8 +123,8 @@ to different chains:
 
 ## Deployment
 
-Frontend application(s) are deployed automatically on pushes to `main` using
-[Fleek](https://app.fleek.co/#/sites/juicebox-kovan).
+Frontend application(s) are deployed automatically on pushes to `matic/chainlink-text-updates` using
+[Fleek](https://app.fleek.co/#/sites/juicebox-matic).
 
 ## Theme
 
