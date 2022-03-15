@@ -542,7 +542,7 @@ msgstr "Implementar projeto"
 
 #: src/components/v1/V1Create/index.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
-msgid "Deploy project on {signerNetwork}"
+msgid "Deploy project on {signerNetwork.toUpperCase()}"
 msgstr "Implementar projeto no {signerNetwork}"
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
@@ -1625,7 +1625,7 @@ msgid "The Juicebox protocol is governed by a community of JBX token holders who
 msgstr "O protocolo do Juicebox é administrado por uma comunidade de títulares de token JBX que votam quinzenalmente em propostas."
 
 #: src/components/shared/ReconfigurationStrategyDrawer.tsx
-msgid "The address of any smart contract deployed on {signerNetwork} that implements"
+msgid "The address of any smart contract deployed on {signerNetwork.toUpperCase()} that implements"
 msgstr "O endereço de qualquer contrato inteligente implementado no {signerNetwork} que executa"
 
 #: src/components/shared/formItems/ProjectPayoutMods.tsx

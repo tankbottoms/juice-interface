@@ -247,6 +247,12 @@ export default function V1Create() {
     dispatch(editingProjectActions.setPayIsPaused(fields.payIsPaused))
   }
 
+  console.log(
+    '#######################\nSIGNER NETWORK',
+    signerNetwork,
+    '\n#######################',
+  )
+
   const deployProject = useCallback(async () => {
     setLoadingCreate(true)
 

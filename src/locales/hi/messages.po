@@ -1415,7 +1415,7 @@ msgid "The JBX protocol is unaudited, and projects built on it may be vulnerable
 msgstr ""
 
 #: src/components/shared/forms/RulesForm.tsx
-msgid "The address of any smart contract deployed on {signerNetwork} that implements"
+msgid "The address of any smart contract deployed on {signerNetwork.toUpperCase()} that implements"
 msgstr ""
 
 #: src/components/shared/formItems/ProjectPayoutMods.tsx

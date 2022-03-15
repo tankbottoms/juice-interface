@@ -37,7 +37,6 @@ export default function ConfirmDeployV2ProjectModal({
   confirmLoading?: boolean
 }) {
   const { signerNetwork, userAddress } = useContext(NetworkContext)
-  console.log({ signerNetwork })
   const {
     fundAccessConstraints,
     fundingCycleData,
@@ -63,6 +62,13 @@ export default function ConfirmDeployV2ProjectModal({
       fundAccessConstraint?.distributionLimitCurrency ?? '1',
     ) as V2CurrencyOption,
   )
+
+  console.log(
+    '#######################\nSIGNER NETWORK',
+    signerNetwork,
+    '\n#######################',
+  )
+
   return (
     <Modal
       visible={visible}
@@ -72,7 +78,7 @@ export default function ConfirmDeployV2ProjectModal({
       okText={
         userAddress
           ? signerNetwork
-            ? t`Deploy project on ${signerNetwork}`
+            ? t`Deploy project on ${signerNetwork.toUpperCase()}`
             : t`Deploy project`
           : t`Connect wallet to deploy`
       }
