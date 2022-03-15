@@ -78,7 +78,7 @@ export default function ConfirmDeployV2ProjectModal({
       okText={
         userAddress
           ? signerNetwork
-            ? t`Deploy project on ${signerNetwork.toUpperCase()}`
+            ? t`Deploy project on ${signerNetwork}`
             : t`Deploy project`
           : t`Connect wallet to deploy`
       }

@@ -165,6 +165,10 @@ msgstr "<0>Peel</0>是一个 DAO，负责管理 juicebox.money 的前端页面�
 msgid "<0>Trending projects</0><1><2/></1>"
 msgstr "<0>热门项目</0><1><2/></1>"
 
+#: src/components/Landing/QAs.tsx
+msgid "<0>Website</0>, <1>Twitter</1>, <2>Discord</2>"
+msgstr ""
+
 #: src/components/v1/V1Project/modals/ConfirmUnstakeTokensModal.tsx
 msgid "<0>Your unclaimed {tokenSymbol} tokens:</0> {0}"
 msgstr "<0>你当前未领取的 {tokenSymbol} 代币数量：</0> {0}"
@@ -183,8 +187,8 @@ msgid "A bonding curve rewards people who wait longer to redeem your tokens for 
 msgstr "联合曲线奖励那些等待更长时间才去赎回代币的人。"
 
 #: src/components/Landing/QAs.tsx
-msgid "A mechanism like Juicebox where upfront financial commitments should be honored over time is only guaranteed within an ecosystem like Ethereum."
-msgstr "像 Juicebox 这样的机制，前期的财务承诺应该随着时间的推移得到兑现，只有在以太坊这样的生态系统中才能得到保证。"
+msgid "A mechanism like Juicebox where upfront financial commitments should be honored over time was only guaranteed within an ecosystem like Ethereum; recently other options have become available on so-called <0>Layer 2</0>."
+msgstr ""
 
 #: src/components/Projects/ArchivedProjectsMessage.tsx
 msgid "A project can be archived by its owner from the tools menu on the project page."
@@ -515,8 +519,8 @@ msgid "Current owner: {owner}"
 msgstr "当前拥有者：{owner}"
 
 #: src/components/v1/V1Project/modals/RedeemModal.tsx
-msgid "Currently worth: <0><1/>{0}</0>"
-msgstr "当前价值： <0><1/>{0}</0>"
+msgid "Currently worth: <0><1/> {0}</0>"
+msgstr ""
 
 #: src/components/shared/ReconfigurationStrategyDrawer.tsx
 #: src/constants/ballotStrategies/ballotStrategies.ts
@@ -542,7 +546,7 @@ msgstr "部署项目"
 
 #: src/components/v1/V1Create/index.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
-msgid "Deploy project on {signerNetwork.toUpperCase()}"
+msgid "Deploy project on {signerNetwork}"
 msgstr "在{signerNetwork} 上部署项目"
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
@@ -698,10 +702,6 @@ msgstr "结束时间"
 #: src/components/Landing/index.tsx
 msgid "Ethereum protocols and DAOs"
 msgstr "以太坊协议和 DAO"
-
-#: src/components/Landing/QAs.tsx
-msgid "Ethereum provides a public environment where internet apps like Juicebox can run in a permission-less, trustless, and unstoppable fashion."
-msgstr "以太坊提供了一个公共环境，让 Juicebox 这样的互联网应用得以无需许可、无需信任且无可阻挡地在上面运行。"
 
 #: src/components/Navbar/MenuItems.tsx
 msgid "FAQ"
@@ -950,6 +950,10 @@ msgstr "Juicebox 是以太坊上的一个开放协议，其本身也是通过这
 msgid "Juicebox was built to allow people and projects to get paid for creating public art and infrastructure, as much as or more than they would working towards corporate ends. No more shady business."
 msgstr "Juicebox 的建立是为了让人们和项目在创造公共艺术和基础设施时获得报酬，跟他们为企业工作时获得的一样，甚至会更多。再也没有黑幕交易。"
 
+#: src/components/Landing/QAs.tsx
+msgid "Just like how Ethereum provides a public environment where internet apps like Juicebox can run in a permission-less, trustless, and unstoppable fashion, Polygon shares many of the same benefits while providing reduction of gas fees. Scaling solutions such as Polygon dramatically reduce various infrastructure costs, and Juicebox will be brought to more L2 solutions as they gain popularity."
+msgstr ""
+
 #: src/components/v1/V1Project/modals/ParticipantsModal.tsx
 msgid "Last paid"
 msgstr "上次支付"
@@ -1024,6 +1028,10 @@ msgstr "可通过重新配置 v 1.1项目的融资周期来启用或禁止代币
 #: src/components/Projects/TrendingProjects.tsx
 msgid "More trending projects"
 msgstr "更多热门项目"
+
+#: src/components/Landing/QAs.tsx
+msgid "Movement DAO is a community funded, operated, and deployed Web3 endowment whose purpose is to facilitate the incubation, funding and sustenance of decentralized communities regardless of purpose - from an innovative start-up to a public good, as long as communities form and take action. Movement DAO is building applications and tools within and on Juicebox v2 to bring crypto treasury management to everyone by enabling affordable L2 solutions (Polygon, Optimism), simplifying creating and deploying NFT collections, curating and selling digital assets, and built-in treasury tools for decentralized finance, and liquidity management. To learn more about how your project can leverage the Movement endowment come visit us in Discord."
+msgstr ""
 
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
@@ -1608,10 +1616,6 @@ msgstr "目标为 0 ：所有资金将被视为溢出，可以通过燃烧项目
 msgid "Text displayed on your project's \"pay\" button. Leave this blank to use the default."
 msgstr "显示在项目的“付款”按钮上的文本。此处留空则使用默认值。"
 
-#: src/components/Landing/QAs.tsx
-msgid "That's the plan, but the core Juicebox contracts will first be deployed to Ethereum Mainnet."
-msgstr "有这一个这是计划，但核心的 Juicebox 合约将首先部署到以太坊主网。"
-
 #: src/components/v1/V1Create/index.tsx
 msgid "The JBX protocol is unaudited, and projects built on it may be vulnerable to bugs or exploits. Be smart!"
 msgstr "JBX 协议未经审计，基于它构建的项目可能受到 bug 的影响或漏洞被恶意利用。使用风险请自行承担！"
@@ -1625,7 +1629,7 @@ msgid "The Juicebox protocol is governed by a community of JBX token holders who
 msgstr "Juicebox协议由JBX代币持有者组成的社区所管理，他们每两周对提案进行投票。"
 
 #: src/components/shared/ReconfigurationStrategyDrawer.tsx
-msgid "The address of any smart contract deployed on {signerNetwork.toUpperCase()} that implements"
+msgid "The address of any smart contract deployed on {signerNetwork} that implements"
 msgstr "在 {signerNetwork} 上部署的智能合约地址，该合约实现了"
 
 #: src/components/shared/formItems/ProjectPayoutMods.tsx
@@ -1651,10 +1655,6 @@ msgstr "该项目在Juicebox合约中的余额。"
 #: src/components/Landing/QAs.tsx
 msgid "The code could always use more eyes and more critique to further the community's confidence. Join our <0>Discord</0> and check out the code on <1>GitHub</1> to work with us."
 msgstr "如果有更多人来帮助审阅代码，将能够进一步增强社区的信心。加入我们的 <0>Discord</0>，以及在 <1>Github</1> 上拉取代码来与我们一起工作。"
-
-#: src/components/Landing/QAs.tsx
-msgid "The contract team will soon start working on L2 payment terminals for Juicebox projects."
-msgstr "合约开发团队将很快开始为 Juicebox 上的项目提供 L2层支付终端。"
 
 #: src/components/v1/FundingCycle/Spending.tsx
 msgid "The funds available to withdraw for this funding cycle after the {0}% JBX fee is subtracted. This number won't roll over to the next funding cycle, so funds should be withdrawn before it ends."
@@ -1718,6 +1718,10 @@ msgstr "任何时候都可以修改这些属性。"
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
 msgid "These settings will <0>not</0> be editable immediately within a funding cycle. They can only be changed for <1>upcoming</1> funding cycles."
 msgstr "这些属性<0>不能</0> 在同一个筹款周期内马上进行修改。 更改的配置只会在 <1>后面的</1> 筹款周期生效。"
+
+#: src/components/Landing/QAs.tsx
+msgid "This L2 Juicebox v1.1 experiment was undertaken by <0>Movement DAO</0> with the kind help from the cool-cat-developers of <1>JuiceboxDAO</1>, <2>WAGMI Studios</2>, and Peel DAO (more on them later), and the community members who make everything happen."
+msgstr ""
 
 #: src/constants/ballotStrategies/ballotStrategies.ts
 msgid "This address is an unrecognized strategy contract. Make sure it is correct!"
@@ -1935,6 +1939,10 @@ msgstr "总收入"
 msgid "Wallet address"
 msgstr "钱包地址"
 
+#: src/components/Landing/QAs.tsx
+msgid "We hope so, because this is where this is deployed."
+msgstr ""
+
 #: src/components/shared/formItems/ProjectLink.tsx
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
@@ -1952,6 +1960,10 @@ msgstr "有什么风险？"
 #: src/components/Landing/QAs.tsx
 msgid "What does Juicebox cost?"
 msgstr "Juicebox 平台怎么收费？"
+
+#: src/components/Landing/QAs.tsx
+msgid "What does the fire mean; what is Movement DAO?"
+msgstr ""
 
 #: src/components/Landing/QAs.tsx
 msgid "What is overflow?"

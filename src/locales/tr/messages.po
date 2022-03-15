@@ -165,6 +165,10 @@ msgstr ""
 msgid "<0>Trending projects</0><1><2/></1>"
 msgstr "Çok konuşulan projeler"
 
+#: src/components/Landing/QAs.tsx
+msgid "<0>Website</0>, <1>Twitter</1>, <2>Discord</2>"
+msgstr ""
+
 #: src/components/v1/V1Project/modals/ConfirmUnstakeTokensModal.tsx
 msgid "<0>Your unclaimed {tokenSymbol} tokens:</0> {0}"
 msgstr "<0>Hak talebinde bulunulmamış {tokenSymbol} token'larınız:</0> {0}"
@@ -183,8 +187,8 @@ msgid "A bonding curve rewards people who wait longer to redeem your tokens for 
 msgstr "Bağlanma eğrisi, tokenlerinizi taşma amaçlı kullanmak için daha uzun süre bekleyen insanları ödüllendirir."
 
 #: src/components/Landing/QAs.tsx
-msgid "A mechanism like Juicebox where upfront financial commitments should be honored over time is only guaranteed within an ecosystem like Ethereum."
-msgstr "Juicebox gibi, önceden yapılan finansal taahhütlerin zaman içinde yerine getirilmesi gereken bir mekanizma, yalnızca Ethereum gibi bir ekosistemde garanti edilir."
+msgid "A mechanism like Juicebox where upfront financial commitments should be honored over time was only guaranteed within an ecosystem like Ethereum; recently other options have become available on so-called <0>Layer 2</0>."
+msgstr ""
 
 #: src/components/Projects/ArchivedProjectsMessage.tsx
 msgid "A project can be archived by its owner from the tools menu on the project page."
@@ -515,8 +519,8 @@ msgid "Current owner: {owner}"
 msgstr "Güncel sahibi: {owner}"
 
 #: src/components/v1/V1Project/modals/RedeemModal.tsx
-msgid "Currently worth: <0><1/>{0}</0>"
-msgstr "Güncel değeri: <0><1/>{0}</0>"
+msgid "Currently worth: <0><1/> {0}</0>"
+msgstr ""
 
 #: src/components/shared/ReconfigurationStrategyDrawer.tsx
 #: src/constants/ballotStrategies/ballotStrategies.ts
@@ -542,7 +546,7 @@ msgstr ""
 
 #: src/components/v1/V1Create/index.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
-msgid "Deploy project on {signerNetwork.toUpperCase()}"
+msgid "Deploy project on {signerNetwork}"
 msgstr ""
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
@@ -698,10 +702,6 @@ msgstr "Son"
 #: src/components/Landing/index.tsx
 msgid "Ethereum protocols and DAOs"
 msgstr "Ethereum protokolleri ve DAO'lar"
-
-#: src/components/Landing/QAs.tsx
-msgid "Ethereum provides a public environment where internet apps like Juicebox can run in a permission-less, trustless, and unstoppable fashion."
-msgstr ""
 
 #: src/components/Navbar/MenuItems.tsx
 msgid "FAQ"
@@ -950,6 +950,10 @@ msgstr ""
 msgid "Juicebox was built to allow people and projects to get paid for creating public art and infrastructure, as much as or more than they would working towards corporate ends. No more shady business."
 msgstr "Juicebox, insanların ve projelerin kamusal sanat ve altyapı oluşturmak için kurumsal amaçlara yönelik çalıştıkları kadar veya daha fazla para almalarına izin vermek için inşa edildi. Artık karanlık iş yok."
 
+#: src/components/Landing/QAs.tsx
+msgid "Just like how Ethereum provides a public environment where internet apps like Juicebox can run in a permission-less, trustless, and unstoppable fashion, Polygon shares many of the same benefits while providing reduction of gas fees. Scaling solutions such as Polygon dramatically reduce various infrastructure costs, and Juicebox will be brought to more L2 solutions as they gain popularity."
+msgstr ""
+
 #: src/components/v1/V1Project/modals/ParticipantsModal.tsx
 msgid "Last paid"
 msgstr "Son ödeme"
@@ -1024,6 +1028,10 @@ msgstr "Token basımı bir v1.1 projesinin finansman döngüsü yeniden yapılan
 #: src/components/Projects/TrendingProjects.tsx
 msgid "More trending projects"
 msgstr "Daha fazla ilgi gören proje"
+
+#: src/components/Landing/QAs.tsx
+msgid "Movement DAO is a community funded, operated, and deployed Web3 endowment whose purpose is to facilitate the incubation, funding and sustenance of decentralized communities regardless of purpose - from an innovative start-up to a public good, as long as communities form and take action. Movement DAO is building applications and tools within and on Juicebox v2 to bring crypto treasury management to everyone by enabling affordable L2 solutions (Polygon, Optimism), simplifying creating and deploying NFT collections, curating and selling digital assets, and built-in treasury tools for decentralized finance, and liquidity management. To learn more about how your project can leverage the Movement endowment come visit us in Discord."
+msgstr ""
 
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
@@ -1608,10 +1616,6 @@ msgstr "Hedef 0: Tüm fonlar taşma olarak kabul edilecek ve proje token'ları y
 msgid "Text displayed on your project's \"pay\" button. Leave this blank to use the default."
 msgstr "Projenizin \"Ödeme\" butonunda görüntülenen metin. Varsayılanı kullanmak için boş bırakın."
 
-#: src/components/Landing/QAs.tsx
-msgid "That's the plan, but the core Juicebox contracts will first be deployed to Ethereum Mainnet."
-msgstr "Plan bu, ancak çekirdek Juicebox sözleşmeleri önce Ethereum Mainnet'e dağıtılacak."
-
 #: src/components/v1/V1Create/index.tsx
 msgid "The JBX protocol is unaudited, and projects built on it may be vulnerable to bugs or exploits. Be smart!"
 msgstr "JBX protokolü denetlenmez ve bunun üzerine inşa edilen projeler hatalara veya açıklardan yararlanmaya karşı savunmasız olabilir. Dikkatli olunmalıdır!"
@@ -1625,7 +1629,7 @@ msgid "The Juicebox protocol is governed by a community of JBX token holders who
 msgstr ""
 
 #: src/components/shared/ReconfigurationStrategyDrawer.tsx
-msgid "The address of any smart contract deployed on {signerNetwork.toUpperCase()} that implements"
+msgid "The address of any smart contract deployed on {signerNetwork} that implements"
 msgstr "Bu arayüzü uygulayan {signerNetwork} üzerinde dağıtılmış herhangi bir akıllı sözleşmenin adresi"
 
 #: src/components/shared/formItems/ProjectPayoutMods.tsx
@@ -1650,10 +1654,6 @@ msgstr ""
 
 #: src/components/Landing/QAs.tsx
 msgid "The code could always use more eyes and more critique to further the community's confidence. Join our <0>Discord</0> and check out the code on <1>GitHub</1> to work with us."
-msgstr ""
-
-#: src/components/Landing/QAs.tsx
-msgid "The contract team will soon start working on L2 payment terminals for Juicebox projects."
 msgstr ""
 
 #: src/components/v1/FundingCycle/Spending.tsx
@@ -1718,6 +1718,10 @@ msgstr "Bu nitelikler herhangi bir zamanda değiştirilebilir."
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
 msgid "These settings will <0>not</0> be editable immediately within a funding cycle. They can only be changed for <1>upcoming</1> funding cycles."
 msgstr "Bu ayarlar, bir finansman döngüsü içinde hemen <0>düzenlenemez</0>. Yalnızca <1>yaklaşan</1> finansman döngüleri için değiştirilebilirler."
+
+#: src/components/Landing/QAs.tsx
+msgid "This L2 Juicebox v1.1 experiment was undertaken by <0>Movement DAO</0> with the kind help from the cool-cat-developers of <1>JuiceboxDAO</1>, <2>WAGMI Studios</2>, and Peel DAO (more on them later), and the community members who make everything happen."
+msgstr ""
 
 #: src/constants/ballotStrategies/ballotStrategies.ts
 msgid "This address is an unrecognized strategy contract. Make sure it is correct!"
@@ -1935,6 +1939,10 @@ msgstr "Hacim"
 msgid "Wallet address"
 msgstr "Cüzdan adresi"
 
+#: src/components/Landing/QAs.tsx
+msgid "We hope so, because this is where this is deployed."
+msgstr ""
+
 #: src/components/shared/formItems/ProjectLink.tsx
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
@@ -1952,6 +1960,10 @@ msgstr "Riskler nelerdir?"
 #: src/components/Landing/QAs.tsx
 msgid "What does Juicebox cost?"
 msgstr "Juicebox'ın maliyeti nedir?"
+
+#: src/components/Landing/QAs.tsx
+msgid "What does the fire mean; what is Movement DAO?"
+msgstr ""
 
 #: src/components/Landing/QAs.tsx
 msgid "What is overflow?"
