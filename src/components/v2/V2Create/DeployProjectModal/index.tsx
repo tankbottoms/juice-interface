@@ -37,6 +37,7 @@ export default function ConfirmDeployV2ProjectModal({
   confirmLoading?: boolean
 }) {
   const { signerNetwork, userAddress } = useContext(NetworkContext)
+  const _signerNetwork = signerNetwork?.toUpperCase()
   const {
     fundAccessConstraints,
     fundingCycleData,
@@ -78,7 +79,7 @@ export default function ConfirmDeployV2ProjectModal({
       okText={
         userAddress
           ? signerNetwork
-            ? t`Deploy project on ${signerNetwork}`
+            ? t`Deploy project on ${_signerNetwork}`
             : t`Deploy project`
           : t`Connect wallet to deploy`
       }

@@ -546,8 +546,8 @@ msgstr "Развернуть проект"
 
 #: src/components/v1/V1Create/index.tsx
 #: src/components/v2/V2Create/DeployProjectModal/index.tsx
-msgid "Deploy project on {signerNetwork}"
-msgstr "Развернуть проект на {signerNetwork}"
+msgid "Deploy project on {_signerNetwork}"
+msgstr "Развернуть проект на {_signerNetwork}"
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
 msgid "Deposit 1 wei to @{handle}"

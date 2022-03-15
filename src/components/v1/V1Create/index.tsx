@@ -68,6 +68,7 @@ const terminalVersion: V1TerminalVersion = '1.1'
 
 export default function V1Create() {
   const { signerNetwork, userAddress } = useContext(NetworkContext)
+  const _signerNetwork = signerNetwork?.toUpperCase()
   const { colors, radii } = useContext(ThemeContext).theme
   const [currentStep, setCurrentStep] = useState<number>()
   const [viewedSteps, setViewedSteps] = useState<number[]>([])
@@ -767,7 +768,7 @@ export default function V1Create() {
           okText={
             userAddress
               ? signerNetwork
-                ? t`Deploy project on ${signerNetwork}`
+                ? t`Deploy project on ${_signerNetwork}`
                 : t`Deploy project`
               : t`Connect wallet to deploy`
           }
