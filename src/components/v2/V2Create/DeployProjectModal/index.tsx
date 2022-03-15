@@ -37,6 +37,7 @@ export default function ConfirmDeployV2ProjectModal({
   confirmLoading?: boolean
 }) {
   const { signerNetwork, userAddress } = useContext(NetworkContext)
+  console.log({ signerNetwork })
   const {
     fundAccessConstraints,
     fundingCycleData,
